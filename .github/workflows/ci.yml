@@ -3,11 +3,11 @@ name: CI
 on:
   push:
     branches:
-      - master
+      - main
 
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   lint:
@@ -40,4 +40,4 @@ jobs:
         run: pnpm install
 
       - name: Typecheck
-        run: pnpm run typecheck
+        run: pnpm run type:check
