@@ -4,7 +4,7 @@ import './assets/styles/tailwind.css'
 
 import { createApp } from 'vue'
 import { setupGlobDirectives } from '@/directives'
-import { router, setupRouter } from '@/router'
+import { setupRouter } from '@/router'
 import { setupStore } from '@/store'
 import App from './App.vue'
 
