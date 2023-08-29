@@ -1,0 +1,21 @@
+import 'uno.css'
+import './assets/styles/index.scss'
+import './assets/styles/tailwind.css'
+
+import { createApp } from 'vue'
+import { setupGlobDirectives } from '@/directives'
+import { router, setupRouter } from '@/router'
+import { setupRouterGuard } from '@/router/guard'
+import { setupStore } from '@/store'
+import App from './App.vue'
+
+(() => {
+  const app = createApp(App)
+
+  setupStore(app)
+  setupRouter(app)
+  setupRouterGuard(router)
+  setupGlobDirectives()
+
+  app.mount('#app')
+})()

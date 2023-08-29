@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "christian-kohler.path-intellisense",
+    "stylelint.vscode-stylelint",
+    "dbaeumer.vscode-eslint",
+    "redhat.vscode-yaml",
+    "csstools.postcss",
+    "mikestead.dotenv",
+    "eamodio.gitlens",
+    "Vue.volar"
+  ]
+}
