@@ -19,8 +19,9 @@
     "svgo": "svgo -f src/assets/icons -o src/assets/icons",
     "clean:cache": "rimraf node_modules/.cache/ && rimraf node_modules/.vite",
     "clean:lib": "rimraf node_modules",
-    "lint:eslint": "eslint --cache --max-warnings 0  \"{src,mock}/**/*.{vue,ts,tsx}\" --fix",
-    "lint:stylelint": "stylelint --cache --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
+    "lint": "pnpm lint:eslint && pnpm lint:stylelint",
+    "lint:eslint": "eslint .",
+    "lint:stylelint": "stylelint \"**/*.{vue,less,postcss,css,scss}\"",
     "postinstall": "simple-git-hooks"
   },
   "dependencies": {
