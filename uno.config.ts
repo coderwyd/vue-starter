@@ -7,8 +7,12 @@ import {
 } from 'unocss'
 
 export default defineConfig({
-  include: ['**.ts', '**.tsx', '**.vue'],
-  exclude: ['node_modules', '.git'],
+  content: {
+    pipeline: {
+      include: ['**.ts', '**.tsx', '**.vue'],
+      exclude: ['node_modules', '.git'],
+    },
+  },
   shortcuts: {
     'wh-full': 'w-full h-full',
     'flex-center': 'flex justify-center items-center',
