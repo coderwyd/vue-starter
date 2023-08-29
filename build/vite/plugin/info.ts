@@ -12,8 +12,6 @@ const fileListTotal: number[] = []
 // eslint-disable-next-line @typescript-eslint/ban-types
 function recursiveDirectory(folder: string, callback: Function): void {
   readdir(folder, (err, files: string[]) => {
-    console.log(err, 'err')
-    console.log(files, 'files')
     if (err)
       throw err
     let count = 0
