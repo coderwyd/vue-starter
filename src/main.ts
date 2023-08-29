@@ -5,7 +5,6 @@ import './assets/styles/tailwind.css'
 import { createApp } from 'vue'
 import { setupGlobDirectives } from '@/directives'
 import { router, setupRouter } from '@/router'
-import { setupRouterGuard } from '@/router/guard'
 import { setupStore } from '@/store'
 import App from './App.vue'
 
@@ -14,7 +13,6 @@ import App from './App.vue'
 
   setupStore(app)
   setupRouter(app)
-  setupRouterGuard(router)
   setupGlobDirectives()
 
   app.mount('#app')
