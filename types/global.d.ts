@@ -3,9 +3,6 @@ type ViteCompression =
   | 'gzip'
   | 'brotli'
   | 'both'
-  | 'gzip-clear'
-  | 'brotli-clear'
-  | 'both-clear'
 
 declare interface ViteEnv {
   VITE_PORT: number

@@ -1,12 +1,10 @@
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
-import UnoCSS from 'unocss/vite'
-import VueDevTools from 'vite-plugin-vue-devtools'
-
+import unocss from 'unocss/vite'
+import vueDevTools from 'vite-plugin-vue-devtools'
 import { configCompressPlugin } from './compress'
 import { configHtmlPlugin } from './html'
 import { viteBuildInfo } from './info'
-
 import unplugin from './unplugin'
 import type { PluginOption } from 'vite'
 
@@ -16,20 +14,20 @@ export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
   } = viteEnv
 
   const vitePlugins: (PluginOption | PluginOption[])[] = [
-    VueDevTools(),
     vue(),
     vueJsx(),
-    UnoCSS(),
+    vueDevTools(),
+    unocss(),
     ...unplugin,
   ]
 
   // vite-plugin-html
-  vitePlugins.push(configHtmlPlugin(viteEnv, isBuild))
+  vitePlugins.push(configHtmlPlugin({ isBuild }))
 
   // The following plugins only work in the production environment
   if (isBuild) {
     // rollup-plugin-gzip
-    vitePlugins.push(configCompressPlugin(VITE_BUILD_COMPRESS))
+    vitePlugins.push(configCompressPlugin({ compress: VITE_BUILD_COMPRESS }))
   }
 
   // build info

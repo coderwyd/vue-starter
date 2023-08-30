@@ -1,6 +1,4 @@
-import { cloneDeep, intersectionWith, isEqual, mergeWith, template, unionWith } from 'lodash-es'
-
-import { isArray, isObject } from './type-checks'
+import { cloneDeep, intersectionWith, isArray, isEqual, isObject, mergeWith, template, unionWith } from 'lodash-es'
 
 export function noop() {}
 
