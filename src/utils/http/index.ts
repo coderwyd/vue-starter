@@ -2,7 +2,7 @@ import axios from 'axios'
 import { clone, isString } from 'lodash-es'
 import { ContentTypeEnum, RequestEnum, ResultEnum } from '@/enums/httpEnum'
 import { appendUrlParams, deepMerge } from '@/utils'
-import { getGlobalConfig } from '@/utils/env'
+import { useGlobSetting } from '@/hooks/useGlobSetting'
 import { VAxios } from './Axios'
 import { AxiosRetry } from './axios-retry'
 import { formatRequestDate, joinTimestamp } from './helper'
@@ -10,7 +10,7 @@ import type { AxiosTransform, CreateAxiosOptions } from './axios-transform'
 import type { AxiosInstance, AxiosResponse } from 'axios'
 import type { RequestOptions, Result } from '#/axios'
 
-const globSetting = getGlobalConfig(import.meta.env)
+const globSetting = useGlobSetting()
 
 /**
  * @description: 数据处理，方便区分多种处理方式

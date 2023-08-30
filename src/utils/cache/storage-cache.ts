@@ -1,5 +1,4 @@
 import { isNil } from 'lodash-es'
-import { isDef } from '@/utils/type-checks'
 
 export interface CreateStorageParams {
   prefixKey: string
@@ -41,7 +40,7 @@ export function createStorage({
       const stringData = JSON.stringify({
         value,
         time: Date.now(),
-        expire: isDef(expire) ? new Date().getTime() + expire * 1000 : null,
+        expire: !isNil(expire) ? new Date().getTime() + expire * 1000 : null,
       })
       this.storage.setItem(this.getKey(key), stringData)
     }

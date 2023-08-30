@@ -8,7 +8,7 @@ export type Options = Partial<CreateStorageParams>
 function createOptions(storage: Storage, options: Options = {}): Options {
   return {
     storage,
-    prefixKey: getStorageShortName(import.meta.env),
+    prefixKey: getStorageShortName(),
     ...options,
   }
 }

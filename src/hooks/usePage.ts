@@ -1,5 +1,5 @@
+import { isNumber } from 'lodash-es'
 import { PageEnum } from '@/enums/pageEnum'
-import { isNumber } from '@/utils/type-checks'
 import type { RouteLocationRaw, Router } from 'vue-router'
 
 export type PathAsPageEnum<T> = T extends { path: string } ? T & { path: PageEnum } : T
@@ -20,9 +20,6 @@ export function useGo(_router?: Router) {
       return
 
     if (isNumber(opt)) {
-      if (opt < 0)
-        router.isBack = true
-
       router.go(opt)
       return
     }

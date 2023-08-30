@@ -1,26 +1,6 @@
 import { readdir, stat } from 'node:fs'
 import process from 'node:process'
-import path from 'node:path'
-
-// Read all environment variable configuration files to process.env
-export function wrapperEnv(envConf: Recordable): ViteEnv {
-  const ret: any = {}
-
-  for (const envName of Object.keys(envConf)) {
-    let realName = envConf[envName].replace(/\\n/g, '\n')
-    realName = realName === 'true' ? true : realName === 'false' ? false : realName
-
-    if (envName === 'VITE_PORT')
-      realName = Number(realName)
-
-    ret[envName] = realName
-    if (typeof realName === 'string')
-      process.env[envName] = realName
-    else if (typeof realName === 'object')
-      process.env[envName] = JSON.stringify(realName)
-  }
-  return ret
-}
+import { resolve } from 'node:path'
 
 function sum(arr: number[]) {
   return arr.reduce((t: number, c: number) => {
@@ -73,7 +53,7 @@ export function getPackageSize(folder: string, callback: Function, fileListTotal
  * @descrition 末尾不带斜杠
  */
 export function getRootPath() {
-  return path.resolve(process.cwd())
+  return resolve(process.cwd())
 }
 
 /**

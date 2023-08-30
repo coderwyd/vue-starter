@@ -10,7 +10,7 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "build:test": "vite build --mode test",
-    "build:pre": "vite build --mode pre",
+    "build:analyze": "vite build --mode analyze",
     "build:prod": "vite build",
     "commit": "git add . && czg",
     "up": "taze major -r -I",
@@ -20,8 +20,7 @@
     "svgo": "svgo -f src/assets/icons -o src/assets/icons",
     "clean:cache": "rimraf node_modules/.cache/ && rimraf node_modules/.vite",
     "clean:lib": "rimraf node_modules",
-    "lint": "pnpm lint:eslint",
-    "lint:eslint": "eslint .",
+    "lint": "eslint .",
     "postinstall": "simple-git-hooks"
   },
   "dependencies": {
@@ -56,6 +55,7 @@
     "picocolors": "^1.0.0",
     "plop": "^3.1.2",
     "rimraf": "^5.0.1",
+    "rollup-plugin-visualizer": "^5.9.2",
     "sass": "^1.66.1",
     "simple-git-hooks": "^2.9.0",
     "svgo": "^3.0.2",

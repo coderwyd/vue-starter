@@ -6,13 +6,16 @@ import { configCompressPlugin } from './compress'
 import { configHtmlPlugin } from './html'
 import { viteBuildInfo } from './info'
 import unplugin from './unplugin'
+import { configVisualizerConfig } from './visualizer'
 import type { PluginOption } from 'vite'
 
-export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
-  const {
-    VITE_BUILD_COMPRESS,
-  } = viteEnv
+interface Options {
+  isBuild: boolean
+  compress: string
+  enableAnalyze?: boolean
+}
 
+export function createVitePlugins({ isBuild, compress, enableAnalyze }: Options) {
   const vitePlugins: (PluginOption | PluginOption[])[] = [
     vue(),
     vueJsx(),
@@ -27,8 +30,11 @@ export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
   // The following plugins only work in the production environment
   if (isBuild) {
     // rollup-plugin-gzip
-    vitePlugins.push(configCompressPlugin({ compress: VITE_BUILD_COMPRESS }))
+    vitePlugins.push(configCompressPlugin({ compress }))
   }
+  // rollup-plugin-visualizer
+  if (enableAnalyze)
+    vitePlugins.push(configVisualizerConfig())
 
   // build info
   vitePlugins.push(viteBuildInfo())

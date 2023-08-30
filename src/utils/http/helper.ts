@@ -1,4 +1,4 @@
-import { isObject, isString } from '@/utils/type-checks'
+import { isObject, isString } from 'lodash-es'
 
 const DATE_TIME_FORMAT = 'YYYY-MM-DD HH:mm:ss'
 

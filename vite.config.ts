@@ -1,38 +1,31 @@
-import process from 'node:process'
 import { defineConfig, loadEnv } from 'vite'
-import { createVitePlugins, getRootPath, getSrcPath, wrapperEnv } from './build'
+import { createVitePlugins, getRootPath, getSrcPath } from './build'
 import type { ConfigEnv, UserConfig } from 'vite'
 
 export default defineConfig(({ command, mode }: ConfigEnv): UserConfig => {
-  const root = process.cwd()
-  const rootPath = getRootPath()
+  const root = getRootPath()
   const srcPath = getSrcPath()
-  const env = loadEnv(mode, root)
-  const viteEnv = wrapperEnv(env)
-  const { CG_CI_WEBAPP_PUBLIC_PATH } = process.env
-  const { VITE_PORT, VITE_DROP_CONSOLE } = viteEnv
+  const { VITE_ENABLE_ANALYZE, VITE_BUILD_COMPRESS } = loadEnv(mode, root)
   const isBuild = command === 'build'
   return {
-    base: CG_CI_WEBAPP_PUBLIC_PATH ?? '/',
-    root,
     resolve: {
       alias: {
-        '~': rootPath,
+        '~': root,
         '@': srcPath,
         '#': getSrcPath('types'),
       },
     },
     server: {
       host: true,
-      port: VITE_PORT,
     },
     esbuild: {
-      drop: VITE_DROP_CONSOLE ? ['console', 'debugger'] : [],
+      drop: isBuild ? ['console', 'debugger'] : [],
     },
     build: {
       target: 'es2015',
       cssTarget: 'chrome80',
       reportCompressedSize: false,
+      chunkSizeWarningLimit: 1500,
       rollupOptions: {
         output: {
           // 入口文件名
@@ -43,7 +36,11 @@ export default defineConfig(({ command, mode }: ConfigEnv): UserConfig => {
         },
       },
     },
-    plugins: createVitePlugins(viteEnv, isBuild),
+    plugins: createVitePlugins({
+      isBuild,
+      enableAnalyze: VITE_ENABLE_ANALYZE === 'true',
+      compress: VITE_BUILD_COMPRESS,
+    }),
     css: {
       devSourcemap: true,
       preprocessorOptions: {
