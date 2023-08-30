@@ -11,7 +11,7 @@ export default [
     imports: ['vue', 'vue-router', '@vueuse/core', 'pinia'],
     dts: 'types/auto-imports.d.ts',
     vueTemplate: true,
-    dirs: ['src/store/modules', 'src/composables'],
+    dirs: ['src/store/modules', 'src/composables', 'src/hooks'],
   }),
   Icons({
     customCollections: {
