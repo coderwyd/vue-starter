@@ -1,6 +1,5 @@
 import { readdir, stat } from 'node:fs'
 import process from 'node:process'
-import { resolve } from 'node:path'
 
 function sum(arr: number[]) {
   return arr.reduce((t: number, c: number) => {
@@ -53,7 +52,7 @@ export function getPackageSize(folder: string, callback: Function, fileListTotal
  * @descrition 末尾不带斜杠
  */
 export function getRootPath() {
-  return resolve(process.cwd())
+  return process.cwd()
 }
 
 /**

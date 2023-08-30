@@ -1,10 +1,9 @@
-import path from 'node:path'
-import process from 'node:process'
 import AutoImport from 'unplugin-auto-import/vite'
 import { FileSystemIconLoader } from 'unplugin-icons/loaders'
 import IconsResolver from 'unplugin-icons/resolver'
 import Icons from 'unplugin-icons/vite'
 import Components from 'unplugin-vue-components/vite'
+import { getSrcPath } from '../utils'
 
 export default [
   AutoImport({
@@ -15,7 +14,7 @@ export default [
   }),
   Icons({
     customCollections: {
-      custom: FileSystemIconLoader(path.resolve(process.cwd(), 'src/assets/icons'), svg =>
+      custom: FileSystemIconLoader(getSrcPath('src/assets/icons'), svg =>
         svg.replace(/^<svg /, '<svg fill="currentColor" '),
       ),
     },
