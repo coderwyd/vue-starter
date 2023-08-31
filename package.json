@@ -37,7 +37,7 @@
     "@coderwyd/eslint-config": "^1.0.8",
     "@commitlint/config-conventional": "^17.7.0",
     "@types/fs-extra": "^11.0.1",
-    "@types/lodash-es": "^4.17.8",
+    "@types/lodash-es": "^4.17.9",
     "@types/node": "^20.5.7",
     "@types/qs": "^6.9.7",
     "@vitejs/plugin-vue": "^4.3.4",
