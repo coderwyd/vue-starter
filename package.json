@@ -39,7 +39,7 @@
     "@types/fs-extra": "^11.0.1",
     "@types/lodash-es": "^4.17.9",
     "@types/node": "^20.5.7",
-    "@types/qs": "^6.9.7",
+    "@types/qs": "^6.9.8",
     "@vitejs/plugin-vue": "^4.3.4",
     "@vitejs/plugin-vue-jsx": "^3.0.2",
     "autoprefixer": "^10.4.15",
