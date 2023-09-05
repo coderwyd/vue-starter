@@ -53,7 +53,7 @@
     "fs-extra": "^11.1.1",
     "lint-staged": "^14.0.1",
     "picocolors": "^1.0.0",
-    "plop": "^3.1.2",
+    "plop": "^4.0.0",
     "rimraf": "^5.0.1",
     "rollup-plugin-visualizer": "^5.9.2",
     "sass": "^1.66.1",
