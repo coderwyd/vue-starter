@@ -62,7 +62,7 @@
     "taze": "^0.11.2",
     "terser": "^5.19.4",
     "typescript": "~5.2.2",
-    "unocss": "^0.55.3",
+    "unocss": "^0.55.7",
     "unplugin-auto-import": "^0.16.6",
     "unplugin-icons": "^0.17.0",
     "unplugin-vue-components": "^0.25.2",
