@@ -32,8 +32,8 @@ dependencies:
 
 devDependencies:
   '@coderwyd/eslint-config':
-    specifier: ^1.0.8
-    version: 1.0.8(@typescript-eslint/parser@6.5.0)(eslint@8.48.0)(typescript@5.2.2)
+    specifier: ^1.0.9
+    version: 1.0.9(@typescript-eslint/parser@6.5.0)(eslint@8.48.0)(typescript@5.2.2)
   '@commitlint/config-conventional':
     specifier: ^17.7.0
     version: 17.7.0
@@ -556,14 +556,14 @@ packages:
       '@babel/helper-validator-identifier': 7.22.5
       to-fast-properties: 2.0.0
 
-  /@coderwyd/eslint-config-basic@1.0.8(@typescript-eslint/eslint-plugin@6.5.0)(@typescript-eslint/parser@6.5.0)(eslint@8.48.0)(typescript@5.2.2):
-    resolution: {integrity: sha512-7c+L0RA+s1iLyH84Y7upT3/TFIahDevSsAd5/aAGMS+Hrw2m3guvlE/HOrmp8X6bGFKbd9MD7y+mGsLu7r8yXQ==}
+  /@coderwyd/eslint-config-basic@1.0.9(@typescript-eslint/eslint-plugin@6.5.0)(@typescript-eslint/parser@6.5.0)(eslint@8.48.0)(typescript@5.2.2):
+    resolution: {integrity: sha512-2nxyhBdZ1fyfOB5cEuqhhs7La6RnfGNlCsP1S1mM8rpd/mK/QCKuPIGdrSNTAKVatXGUyl3+HfSJbcugsjIaOQ==}
     peerDependencies:
       eslint: '>=7.4.0'
     dependencies:
       eslint: 8.48.0
       eslint-define-config: 1.23.0
-      eslint-plugin-coderwyd: 1.0.8(eslint@8.48.0)(typescript@5.2.2)
+      eslint-plugin-coderwyd: 1.0.9(eslint@8.48.0)(typescript@5.2.2)
       eslint-plugin-eslint-comments: 3.2.0(eslint@8.48.0)
       eslint-plugin-html: 7.1.0
       eslint-plugin-import: /eslint-plugin-i@2.28.0-2(@typescript-eslint/parser@6.5.0)(eslint@8.48.0)
@@ -586,13 +586,13 @@ packages:
       - typescript
     dev: true
 
-  /@coderwyd/eslint-config-ts@1.0.8(eslint@8.48.0)(typescript@5.2.2):
-    resolution: {integrity: sha512-3vQTOlOUuciB1SOIO9hCU2nOubC6OKmGqu1aJZY36OInz3k17ss8eGnJZLI8nkDf67zDPQ5pMz7/zDxjf7KPIw==}
+  /@coderwyd/eslint-config-ts@1.0.9(eslint@8.48.0)(typescript@5.2.2):
+    resolution: {integrity: sha512-WltF1TR43ifEgJtRlYB/sl0iG8HvgPPDZHSFhnWh7mX3C1BGGs76tvOIhJKa1pTCKnd5fk5Z49PXuLv6iiAOtg==}
     peerDependencies:
       eslint: '>=7.4.0'
       typescript: '>=3.9'
     dependencies:
-      '@coderwyd/eslint-config-basic': 1.0.8(@typescript-eslint/eslint-plugin@6.5.0)(@typescript-eslint/parser@6.5.0)(eslint@8.48.0)(typescript@5.2.2)
+      '@coderwyd/eslint-config-basic': 1.0.9(@typescript-eslint/eslint-plugin@6.5.0)(@typescript-eslint/parser@6.5.0)(eslint@8.48.0)(typescript@5.2.2)
       '@typescript-eslint/eslint-plugin': 6.5.0(@typescript-eslint/parser@6.5.0)(eslint@8.48.0)(typescript@5.2.2)
       '@typescript-eslint/parser': 6.5.0(eslint@8.48.0)(typescript@5.2.2)
       eslint: 8.48.0
@@ -606,13 +606,13 @@ packages:
       - supports-color
     dev: true
 
-  /@coderwyd/eslint-config-vue@1.0.8(@typescript-eslint/parser@6.5.0)(eslint@8.48.0)(typescript@5.2.2):
-    resolution: {integrity: sha512-oND0/5YYRXGzI3UifzQ6n97TJ3v0cC1jEYlflZC68gj/dhF/5r24Y1F7G9CwL457rmHynANoPYJJcHPT5sOTgg==}
+  /@coderwyd/eslint-config-vue@1.0.9(@typescript-eslint/parser@6.5.0)(eslint@8.48.0)(typescript@5.2.2):
+    resolution: {integrity: sha512-+9hw/vAWQV6fc8EH53ryJ1mSOClU5EgBlOqqZChw/EjbXH4VU9oguUrF8dFJ3u0jAa89s2YAlnNR/DQaDUNJ3w==}
     peerDependencies:
       eslint: '>=7.4.0'
     dependencies:
-      '@coderwyd/eslint-config-basic': 1.0.8(@typescript-eslint/eslint-plugin@6.5.0)(@typescript-eslint/parser@6.5.0)(eslint@8.48.0)(typescript@5.2.2)
-      '@coderwyd/eslint-config-ts': 1.0.8(eslint@8.48.0)(typescript@5.2.2)
+      '@coderwyd/eslint-config-basic': 1.0.9(@typescript-eslint/eslint-plugin@6.5.0)(@typescript-eslint/parser@6.5.0)(eslint@8.48.0)(typescript@5.2.2)
+      '@coderwyd/eslint-config-ts': 1.0.9(eslint@8.48.0)(typescript@5.2.2)
       eslint: 8.48.0
       eslint-define-config: 1.23.0
       eslint-plugin-vue: 9.17.0(eslint@8.48.0)
@@ -627,12 +627,12 @@ packages:
       - typescript
     dev: true
 
-  /@coderwyd/eslint-config@1.0.8(@typescript-eslint/parser@6.5.0)(eslint@8.48.0)(typescript@5.2.2):
-    resolution: {integrity: sha512-aZybbuurM9+THdrkNMkMcJzMDwnygfNj/TvqGq5tpinnyTx2o3PLbjVp5ymKHX3YOqFC8HHc55JkkjUrEz1cJQ==}
+  /@coderwyd/eslint-config@1.0.9(@typescript-eslint/parser@6.5.0)(eslint@8.48.0)(typescript@5.2.2):
+    resolution: {integrity: sha512-J5l8klui6TJClQoRTy5QWXwOhpVRjI+Y3GH938ehU5OALuJVRosrqrV9ON4aRgWw31W8UNTmvMCBbIMzx6U8ng==}
     peerDependencies:
       eslint: '>=7.4.0'
     dependencies:
-      '@coderwyd/eslint-config-vue': 1.0.8(@typescript-eslint/parser@6.5.0)(eslint@8.48.0)(typescript@5.2.2)
+      '@coderwyd/eslint-config-vue': 1.0.9(@typescript-eslint/parser@6.5.0)(eslint@8.48.0)(typescript@5.2.2)
       eslint: 8.48.0
     transitivePeerDependencies:
       - '@typescript-eslint/eslint-plugin'
@@ -2555,7 +2555,7 @@ packages:
     dev: true
 
   /concat-map@0.0.1:
-    resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=}
+    resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
     dev: true
 
   /connect-history-api-fallback@1.6.0:
@@ -3124,8 +3124,8 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-plugin-coderwyd@1.0.8(eslint@8.48.0)(typescript@5.2.2):
-    resolution: {integrity: sha512-HuE3yofz2TgGmQoHJcJwPXt3207Rf3IHbFZo6JWmvAKzFrzxKHnbx9aZZ1WhHGYC10A0xuHBwKe51mQs8yRd0A==}
+  /eslint-plugin-coderwyd@1.0.9(eslint@8.48.0)(typescript@5.2.2):
+    resolution: {integrity: sha512-vSmlSg/RO+7S/IIHEKlUH6Y7aNCL6ehMnlD5b2U8SPtrj3aOOCcNdWLpmN0CGC1DPfmtgG/62Ncr/7oG1NfqCQ==}
     dependencies:
       '@typescript-eslint/utils': 6.5.0(eslint@8.48.0)(typescript@5.2.2)
     transitivePeerDependencies:
