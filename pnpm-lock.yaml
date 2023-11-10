@@ -9,8 +9,8 @@ dependencies:
     specifier: ^10.5.0
     version: 10.5.0(vue@3.3.8)
   axios:
-    specifier: ^1.6.0
-    version: 1.6.0
+    specifier: ^1.6.1
+    version: 1.6.1
   dayjs:
     specifier: ^1.11.10
     version: 1.11.10
@@ -138,7 +138,7 @@ devDependencies:
     version: 3.2.0(vite@4.5.0)
   vite-plugin-vue-devtools:
     specifier: ^0.5.1
-    version: 0.5.1(@types/node@20.8.10)(axios@1.6.0)(pug@3.0.2)(vite@4.5.0)(vue@3.3.8)
+    version: 0.5.1(@types/node@20.8.10)(axios@1.6.1)(pug@3.0.2)(vite@4.5.0)(vue@3.3.8)
   vue-tsc:
     specifier: ^1.8.22
     version: 1.8.22(typescript@5.2.2)
@@ -1929,7 +1929,7 @@ packages:
       - '@vue/composition-api'
       - vue
 
-  /@vueuse/integrations@10.4.1(axios@1.6.0)(vue@3.3.8):
+  /@vueuse/integrations@10.4.1(axios@1.6.1)(vue@3.3.8):
     resolution: {integrity: sha512-uRBPyG5Lxoh1A/J+boiioPT3ELEAPEo4t8W6Mr4yTKIQBeW/FcbsotZNPr4k9uz+3QEksMmflWloS9wCnypM7g==}
     peerDependencies:
       async-validator: '*'
@@ -1972,7 +1972,7 @@ packages:
     dependencies:
       '@vueuse/core': 10.4.1(vue@3.3.8)
       '@vueuse/shared': 10.4.1(vue@3.3.8)
-      axios: 1.6.0
+      axios: 1.6.1
       vue-demi: 0.14.6(vue@3.3.8)
     transitivePeerDependencies:
       - '@vue/composition-api'
@@ -2235,8 +2235,8 @@ packages:
       postcss-value-parser: 4.2.0
     dev: true
 
-  /axios@1.6.0:
-    resolution: {integrity: sha512-EZ1DYihju9pwVB+jg67ogm+Tmqc6JmhamRN6I4Zt8DfZu5lbcQGw3ozH9lFejSJgs/ibaef3A9PMXPLeefFGJg==}
+  /axios@1.6.1:
+    resolution: {integrity: sha512-vfBmhDpKafglh0EldBEbVuoe7DyAavGSLWhuSm5ZSEKQnHhBf0xAAwybbNH1IkrJNGnS/VG4I5yxig1pCEXE4g==}
     dependencies:
       follow-redirects: 1.15.2
       form-data: 4.0.0
@@ -7283,14 +7283,14 @@ packages:
       - supports-color
     dev: true
 
-  /vite-plugin-vue-devtools@0.5.1(@types/node@20.8.10)(axios@1.6.0)(pug@3.0.2)(vite@4.5.0)(vue@3.3.8):
+  /vite-plugin-vue-devtools@0.5.1(@types/node@20.8.10)(axios@1.6.1)(pug@3.0.2)(vite@4.5.0)(vue@3.3.8):
     resolution: {integrity: sha512-z6wzaRxvmQVF1A8iNPIrCrpgJWbFC8bQpCG18yTSHFzRYTkFrqTZ37JjrKysPP0EvLitI1PYru0Odqt2ICfCbQ==}
     engines: {node: '>=v14'}
     peerDependencies:
       vite: ^3.1.0 || ^4.0.0-0
     dependencies:
       '@vueuse/core': 10.5.0(vue@3.3.8)
-      '@vueuse/integrations': 10.4.1(axios@1.6.0)(vue@3.3.8)
+      '@vueuse/integrations': 10.4.1(axios@1.6.1)(vue@3.3.8)
       '@webfansplz/vuedoc-parser': 0.0.3(@types/node@20.8.10)(pug@3.0.2)
       algoliasearch: 4.19.1
       birpc: 0.2.13
