@@ -36,10 +36,10 @@
   "devDependencies": {
     "@coderwyd/eslint-config": "^1.0.9",
     "@commitlint/config-conventional": "^18.1.0",
-    "@types/fs-extra": "^11.0.3",
-    "@types/lodash-es": "^4.17.10",
+    "@types/fs-extra": "^11.0.4",
+    "@types/lodash-es": "^4.17.11",
     "@types/node": "^20.8.10",
-    "@types/qs": "^6.9.9",
+    "@types/qs": "^6.9.10",
     "@vitejs/plugin-vue": "^4.4.1",
     "@vitejs/plugin-vue-jsx": "^3.0.2",
     "autoprefixer": "^10.4.16",
