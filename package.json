@@ -40,7 +40,7 @@
     "@types/lodash-es": "^4.17.11",
     "@types/node": "^20.9.2",
     "@types/qs": "^6.9.10",
-    "@vitejs/plugin-vue": "^4.4.1",
+    "@vitejs/plugin-vue": "^4.5.0",
     "@vitejs/plugin-vue-jsx": "^3.0.2",
     "autoprefixer": "^10.4.16",
     "cross-env": "^7.0.3",
