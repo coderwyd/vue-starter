@@ -8,7 +8,7 @@ import { setupRouter } from '@/router'
 import { setupStore } from '@/store'
 import App from './App.vue'
 
-(() => {
+function setupApp() {
   const app = createApp(App)
 
   setupStore(app)
@@ -16,4 +16,5 @@ import App from './App.vue'
   setupGlobDirectives()
 
   app.mount('#app')
-})()
+}
+setupApp()

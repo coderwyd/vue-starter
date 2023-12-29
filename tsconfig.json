@@ -1,35 +1,35 @@
 {
   "compilerOptions": {
     "target": "esnext",
+    "jsx": "preserve",
+    "lib": ["dom", "esnext"],
+    "noLib": false,
+    "experimentalDecorators": true,
+    "baseUrl": ".",
     "module": "esnext",
     "moduleResolution": "node",
-    "strict": true,
-    "noLib": false,
-    "forceConsistentCasingInFileNames": true,
-    "allowSyntheticDefaultImports": true,
-    "strictFunctionTypes": false,
-    "jsx": "preserve",
-    "baseUrl": ".",
-    "allowJs": true,
-    "sourceMap": true,
-    "esModuleInterop": true,
+    "paths": {
+      "@/*": ["src/*"],
+      "#/*": ["types/*"]
+    },
     "resolveJsonModule": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "experimentalDecorators": true,
-    "lib": ["dom", "esnext"],
-    "outDir": "./dist",
-    "noImplicitAny": false,
-    "skipLibCheck": true,
     "types": [
       "vite/client",
       "unplugin-icons/types/vue"
     ],
+    "allowJs": true,
+    "strict": true,
+    "strictFunctionTypes": false,
+    "noImplicitAny": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "outDir": "./dist",
     "removeComments": true,
-    "paths": {
-      "@/*": ["src/*"],
-      "#/*": ["types/*"]
-    }
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
   },
   "include": [
     "src/**/*.ts",

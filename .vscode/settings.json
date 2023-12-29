@@ -1,41 +1,31 @@
 {
   "typescript.tsdk": "./node_modules/typescript/lib",
   "npm.packageManager": "pnpm",
+  // Enable the ESlint flat config support
+  "eslint.experimental.useFlatConfig": true,
+
+  // Disable the default formatter, use eslint instead
   "prettier.enable": false,
-  "editor.tabSize": 2,
   "editor.formatOnSave": false,
+
+  // Auto fix
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true // this allows ESLint to auto fix on save
+    "source.fixAll": "explicit",
+    "source.organizeImports": "never"
   },
-  "[vue]": {
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true,
-      "source.fixAll.stylelint": true
-    }
-  },
+
+  // Enable eslint for all supported languages
   "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "vue",
     "html",
+    "css",
+    "less",
+    "scss",
+    "json",
+    "jsonc",
+    "yaml",
+    "yml",
     "markdown",
-    "json",
-    "jsonc",
-    "yaml"
-  ],
-  "eslint.probe": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "html",
-    "vue",
-    "json",
-    "json5",
-    "jsonc",
-    "yaml"
+    "toml"
   ],
   "css.validate": false,
   "less.validate": false,

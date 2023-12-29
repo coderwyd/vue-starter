@@ -15,16 +15,25 @@ function createOptions(storage: Storage, options: Options = {}): Options {
 
 export const WebStorage = create(createOptions(sessionStorage))
 
-export function createStorage(storage: Storage = sessionStorage, options: Options = {}) {
+export function createStorage(
+  storage: Storage = sessionStorage,
+  options: Options = {},
+) {
   return create(createOptions(storage, options))
 }
 
 export function createSessionStorage(options: Options = {}) {
-  return createStorage(sessionStorage, { ...options, timeout: DEFAULT_CACHE_TIME })
+  return createStorage(sessionStorage, {
+    ...options,
+    timeout: DEFAULT_CACHE_TIME,
+  })
 }
 
 export function createLocalStorage(options: Options = {}) {
-  return createStorage(localStorage, { ...options, timeout: DEFAULT_CACHE_TIME })
+  return createStorage(localStorage, {
+    ...options,
+    timeout: DEFAULT_CACHE_TIME,
+  })
 }
 
 /**

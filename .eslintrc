@@ -1,9 +1,0 @@
-{
-  "extends": "@coderwyd",
-  "ignorePatterns":[
-    "*.hbs"
-  ],
-  "rules": {
-    "no-console": "off"
-  }
-}

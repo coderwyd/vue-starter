@@ -1,4 +1,13 @@
-import { cloneDeep, intersectionWith, isArray, isEqual, isObject, mergeWith, template, unionWith } from 'lodash-es'
+import {
+  cloneDeep,
+  intersectionWith,
+  isArray,
+  isEqual,
+  isObject,
+  mergeWith,
+  template,
+  unionWith,
+} from 'lodash-es'
 
 export function noop() {}
 
@@ -21,11 +30,12 @@ export function getPopupContainer(node?: HTMLElement): HTMLElement {
  */
 export function appendUrlParams(baseUrl: string, obj: any): string {
   let parameters = ''
-  for (const key in obj)
-    parameters += `${key}=${encodeURIComponent(obj[key])}&`
+  for (const key in obj) parameters += `${key}=${encodeURIComponent(obj[key])}&`
 
   parameters = parameters.replace(/&$/, '')
-  return /\?$/.test(baseUrl) ? baseUrl + parameters : baseUrl.replace(/\/?$/, '?') + parameters
+  return /\?$/.test(baseUrl)
+    ? baseUrl + parameters
+    : baseUrl.replace(/\/?$/, '?') + parameters
 }
 
 /**
@@ -42,7 +52,10 @@ export function appendUrlParams(baseUrl: string, obj: any): string {
  *        - "replace": Replace the source array with the target array. 用目标数组替换源数组。
  * @returns The merged object. 合并后的对象。
  */
-export function deepMerge<T extends object | null | undefined, U extends object | null | undefined>(
+export function deepMerge<
+  T extends object | null | undefined,
+  U extends object | null | undefined,
+>(
   source: T,
   target: U,
   mergeArrays: 'union' | 'intersection' | 'concat' | 'replace' = 'replace',
@@ -65,11 +78,17 @@ export function deepMerge<T extends object | null | undefined, U extends object 
 
   return mergeWith(cloneDeep(source), target, (objValue, srcValue) => {
     if (isObject(objValue) && isObject(srcValue)) {
-      return mergeWith(cloneDeep(objValue), srcValue, (prevValue, nextValue) => {
-        // If both values are arrays, merge them using mergeArraysFn function.
-        // 如果两个值都是数组，用mergeArraysFn函数将它们合并。
-        return isArray(prevValue) ? mergeArraysFn(prevValue, nextValue) : undefined
-      })
+      return mergeWith(
+        cloneDeep(objValue),
+        srcValue,
+        (prevValue, nextValue) => {
+          // If both values are arrays, merge them using mergeArraysFn function.
+          // 如果两个值都是数组，用mergeArraysFn函数将它们合并。
+          return isArray(prevValue)
+            ? mergeArraysFn(prevValue, nextValue)
+            : undefined
+        },
+      )
     }
   })
 }
@@ -84,18 +103,15 @@ export function deepMerge<T extends object | null | undefined, U extends object 
  * @returns The error message string. 错误信息字符串。
  */
 export function getErrorMessage(error): string {
-  if (error instanceof Error)
-    return error.message
-
-  else
-    return String(error)
+  if (error instanceof Error) return error.message
+  else return String(error)
 }
 
 // dynamic use hook props
 export function getDynamicProps<T extends object, U>(props: T): Partial<U> {
   const ret: Recordable = {}
 
-  Object.keys(props).forEach((key) => {
+  Object.keys(props).forEach(key => {
     ret[key] = unref((props as Recordable)[key])
   })
 
@@ -134,8 +150,7 @@ export function replaceTemplate<T extends Recordable>(tpl: string, context: T) {
       interpolate: /{{([\S\s]+?)}}/g,
     })
     return compiled(context)
-  }
-  catch (err) {
+  } catch (err) {
     return tpl
   }
 }
@@ -146,7 +161,7 @@ export function delay(waitTime: number) {
 
 /**
  * @param { Promise } promise
- * @param { Object= } errorExt - Additional Information you can pass to the err object
+ * @param {object=} errorExt - Additional Information you can pass to the err object
  * @return { Promise }
  */
 export function awaitTo<T, U = Error>(
