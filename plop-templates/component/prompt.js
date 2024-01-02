@@ -8,8 +8,7 @@ module.exports = {
       name: 'name',
       message: 'component name:',
       validate(value) {
-        if (!value || value.trim === '')
-          return 'name is required'
+        if (!value || value.trim === '') return 'name is required'
 
         return true
       },
@@ -18,22 +17,25 @@ module.exports = {
       type: 'checkbox',
       name: 'blocks',
       message: 'Blocks:',
-      choices: [{
-        name: '<template>',
-        value: 'template',
-        checked: true,
-      }, {
-        name: '<script>',
-        value: 'script',
-        checked: true,
-      }, {
-        name: 'style',
-        value: 'style',
-        checked: true,
-      }],
+      choices: [
+        {
+          name: '<template>',
+          value: 'template',
+          checked: true,
+        },
+        {
+          name: '<script>',
+          value: 'script',
+          checked: true,
+        },
+        {
+          name: 'style',
+          value: 'style',
+          checked: true,
+        },
+      ],
       validate(value) {
-        if (value.includes('script') || value.includes('template'))
-          return true
+        if (value.includes('script') || value.includes('template')) return true
 
         return 'View require at least a <script> or <template> tag.'
       },

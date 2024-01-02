@@ -4,7 +4,8 @@ import type Vue from 'vue'
 declare global {
   declare module '*.vue' {
     import type { DefineComponent } from 'vue'
-    const Component: DefineComponent<{}, {}, any>
+
+    const Component: DefineComponent<object, object, any>
     export default Component
 
     // export type JSXComponent<Props = any> =
@@ -23,6 +24,7 @@ declare global {
 
   declare module '*.tsx' {
     import Vue from 'compatible-vue'
+
     export default Vue
   }
   namespace JSX {

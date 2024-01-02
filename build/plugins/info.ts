@@ -19,8 +19,7 @@ export function viteBuildInfo(): Plugin {
       outDir = resolvedConfig.build?.outDir ?? 'dist'
     },
     buildStart() {
-      if (config.command === 'build')
-        startTime = dayjs(new Date())
+      if (config.command === 'build') startTime = dayjs(new Date())
     },
     closeBundle() {
       if (config.command === 'build') {
@@ -31,9 +30,7 @@ export function viteBuildInfo(): Plugin {
               green(
                 `🎉恭喜打包完成（总用时${dayjs
                   .duration(endTime.diff(startTime))
-                  .format('mm分ss秒')}，打包后的大小为${
-                    size
-                  }）`,
+                  .format('mm分ss秒')}，打包后的大小为${size}）`,
               ),
             ),
           )

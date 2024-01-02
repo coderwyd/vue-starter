@@ -40,7 +40,9 @@ export function sendVerificationCodeApi(params: SendVerificationCodeParams) {
 /**
  * @description: 居民通过H5自注册 api
  */
-export function residentSelfRegistrationByH5Api(params: ResidentSelfRegistrationByH5Params) {
+export function residentSelfRegistrationByH5Api(
+  params: ResidentSelfRegistrationByH5Params,
+) {
   return request.post<Result<ResidentSelfRegistrationByH5Result>>(
     {
       url: Api.ResidentSelfRegistrationByH5,
@@ -85,7 +87,9 @@ export function getNewTokenByRefreshTokenApi(params: { refreshToken: string }) {
  * 添加家庭成员名称
  */
 export function addOrModOrDelFamilyMemberApi<T = 'add'>(
-  params: T extends 'del' ? DelFamilyMemberParams : AddOrModOrDelFamilyMemberParams,
+  params: T extends 'del'
+    ? DelFamilyMemberParams
+    : AddOrModOrDelFamilyMemberParams,
 ) {
   return request.post({
     url: Api.AddOrModOrDelFamilyMember,

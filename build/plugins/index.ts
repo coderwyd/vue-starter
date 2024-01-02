@@ -15,7 +15,11 @@ interface Options {
   enableAnalyze?: boolean
 }
 
-export function createVitePlugins({ isBuild, compress, enableAnalyze }: Options) {
+export function createVitePlugins({
+  isBuild,
+  compress,
+  enableAnalyze,
+}: Options) {
   const vitePlugins: (PluginOption | PluginOption[])[] = [
     vue(),
     vueJsx(),
@@ -33,8 +37,7 @@ export function createVitePlugins({ isBuild, compress, enableAnalyze }: Options)
     vitePlugins.push(configCompressPlugin({ compress }))
   }
   // rollup-plugin-visualizer
-  if (enableAnalyze)
-    vitePlugins.push(configVisualizerConfig())
+  if (enableAnalyze) vitePlugins.push(configVisualizerConfig())
 
   // build info
   vitePlugins.push(viteBuildInfo())

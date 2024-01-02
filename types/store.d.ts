@@ -1,5 +1,5 @@
+import type { ErrorTypeEnum } from '@/enums/exceptionEnum'
 import type { GetUserInfoResult } from '@/api/user/types'
-import { ErrorTypeEnum } from '@/enums/exceptionEnum'
 
 // Error-log information
 export interface ErrorLogInfo {

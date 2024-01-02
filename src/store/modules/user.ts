@@ -38,7 +38,9 @@ export const useUserStore = defineStore({
   }),
   getters: {
     getUserInfo(state): GetUserInfoResult {
-      return state.userInfo || getAuthCache<GetUserInfoResult>(USER_INFO_KEY) || {}
+      return (
+        state.userInfo || getAuthCache<GetUserInfoResult>(USER_INFO_KEY) || {}
+      )
     },
     getAccessToken(state) {
       return state.accessToken || getAuthCache<string>(ACCESS_TOKEN_KEY)
@@ -100,16 +102,16 @@ export const useUserStore = defineStore({
         message,
       })
     },
-    async afterLoginAction(goHome?: boolean): Promise<Nullable<GetUserInfoResult>> {
-      if (!this.getAccessToken)
-        return null
+    async afterLoginAction(
+      goHome?: boolean,
+    ): Promise<Nullable<GetUserInfoResult>> {
+      if (!this.getAccessToken) return null
       const userInfo = await this.getUserInfoAction()
       goHome && (await router.replace(PageEnum.BASE_HOME))
       return userInfo
     },
     async getUserInfoAction(): Promise<Nullable<GetUserInfoResult>> {
-      if (!this.getAccessToken || !this.getUserUuid)
-        return null
+      if (!this.getAccessToken || !this.getUserUuid) return null
 
       const userInfo = await getUserInfoApi({
         userUuid: this.getUserUuid,
@@ -137,8 +139,7 @@ export const useUserStore = defineStore({
           await logoutApi({
             token: this.getAccessToken,
           })
-        }
-        catch {
+        } catch {
           console.log('logout error')
         }
       }

@@ -2,5 +2,5 @@
 // import { setupLoadingDirective } from './loading';
 
 export function setupGlobDirectives() {
-//   // setupLoadingDirective(app);
+  //   // setupLoadingDirective(app);
 }

@@ -6,7 +6,9 @@ export interface AppProviderContextProps {
   isMobile: Ref<boolean>
 }
 
-const key: InjectionKey<AppProviderContextProps> = Symbol('app-provider-context')
+const key: InjectionKey<AppProviderContextProps> = Symbol(
+  'app-provider-context',
+)
 
 export function createAppProviderContext(context: AppProviderContextProps) {
   return createContext<AppProviderContextProps>(context, key)
