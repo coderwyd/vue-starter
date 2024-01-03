@@ -134,8 +134,8 @@ devDependencies:
     specifier: ^0.5.1
     version: 0.5.1(vite@5.0.10)
   vite-plugin-html:
-    specifier: ^3.2.0
-    version: 3.2.0(vite@5.0.10)
+    specifier: ^3.2.1
+    version: 3.2.1(vite@5.0.10)
   vite-plugin-vue-devtools:
     specifier: ^0.5.1
     version: 0.5.1(@types/node@20.10.5)(axios@1.6.3)(pug@3.0.2)(vite@5.0.10)(vue@3.3.13)
@@ -5428,7 +5428,7 @@ packages:
     dev: true
 
   /jstransformer@1.0.0:
-    resolution: {integrity: sha1-7Yvwkh4vPx7U1cGkT2hwntJHIsM=}
+    resolution: {integrity: sha512-C9YK3Rf8q6VAPDCCU9fnqo3mAfOH6vUGnMcP4AQAYIEpWtfGLpwOTmZ+igtdK5y+VvI2n3CyYSzy4Qh34eq24A==}
     dependencies:
       is-promise: 2.2.2
       promise: 7.3.1
@@ -7667,7 +7667,7 @@ packages:
     dev: true
 
   /token-stream@1.0.0:
-    resolution: {integrity: sha1-zCAOqyYT9BZtJ/+a/HylbUnfbrQ=}
+    resolution: {integrity: sha512-VSsyNPPW74RpHwR8Fc21uubwHY7wMDeJLys2IX5zJNih+OnAnaifKHo+1LHT7DAdloQ7apeaaWg8l7qnf/TnEg==}
     dev: true
 
   /totalist@3.0.1:
@@ -8061,8 +8061,8 @@ packages:
       - supports-color
     dev: true
 
-  /vite-plugin-html@3.2.0(vite@5.0.10):
-    resolution: {integrity: sha512-2VLCeDiHmV/BqqNn5h2V+4280KRgQzCFN47cst3WiNK848klESPQnzuC3okH5XHtgwHH/6s1Ho/YV6yIO0pgoQ==}
+  /vite-plugin-html@3.2.1(vite@5.0.10):
+    resolution: {integrity: sha512-UuNTUvGPa9BxZK1I/VC+hWMSl0eIE5ClEdXza3SGGb09jxxS7oAAjRGalUJNZI9lAPvu0W817GD53K/p78wxQw==}
     peerDependencies:
       vite: '>=2.0.0'
     dependencies:
@@ -8073,7 +8073,7 @@ packages:
       dotenv: 16.3.1
       dotenv-expand: 8.0.3
       ejs: 3.1.9
-      fast-glob: 3.3.1
+      fast-glob: 3.3.2
       fs-extra: 10.1.0
       html-minifier-terser: 6.1.0
       node-html-parser: 5.4.2
