@@ -1,6 +1,6 @@
 import dayjs from 'dayjs'
 import duration from 'dayjs/plugin/duration'
-import { bold, green } from 'picocolors'
+import pico from 'picocolors'
 import { getPackageSize } from '../utils'
 import type { Plugin } from 'vite'
 import type { Dayjs } from 'dayjs'
@@ -26,8 +26,8 @@ export function viteBuildInfo(): Plugin {
         endTime = dayjs(new Date())
         getPackageSize(outDir, (size: string) => {
           console.log(
-            bold(
-              green(
+            pico.bold(
+              pico.green(
                 `🎉恭喜打包完成（总用时${dayjs
                   .duration(endTime.diff(startTime))
                   .format('mm分ss秒')}，打包后的大小为${size}）`,
