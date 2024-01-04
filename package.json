@@ -2,7 +2,7 @@
   "name": "vue-starter",
   "type": "module",
   "version": "1.0.0",
-  "packageManager": "pnpm@8.10.5",
+  "packageManager": "pnpm@8.14.0",
   "scripts": {
     "new": "plop --plopfile ./plop-templates/plopfile.js",
     "bootstrap": "npm install",
