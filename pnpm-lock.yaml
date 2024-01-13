@@ -137,7 +137,7 @@ devDependencies:
     specifier: ^3.2.1
     version: 3.2.1(vite@5.0.11)
   vite-plugin-vue-devtools:
-    specifier: ^7.0.5
+    specifier: ^7.0.8
     version: 7.0.8(vite@5.0.11)
   vue-tsc:
     specifier: ^1.8.27
