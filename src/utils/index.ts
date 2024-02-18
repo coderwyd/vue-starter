@@ -131,17 +131,17 @@ export function cached(fn: (str: string) => string) {
 
 const camelizeRE = /-(\w)/g
 export const camelize = cached((str: string): string => {
-  return str.replace(camelizeRE, (_, c) => c.toUpperCase())
+  return str.replaceAll(camelizeRE, (_, c) => c.toUpperCase())
 })
 
 const underlineRE = /([A-Z])/g
 export const underline = cached((str: string): string => {
-  return str.replace(underlineRE, '_$1').toUpperCase()
+  return str.replaceAll(underlineRE, '_$1').toUpperCase()
 })
 
 const kebabCaseRE = /([A-Z])/g
 export const kebabCase = cached((str: string): string => {
-  return str.replace(kebabCaseRE, '-$1').toUpperCase()
+  return str.replaceAll(kebabCaseRE, '-$1').toUpperCase()
 })
 
 export function replaceTemplate<T extends Recordable>(tpl: string, context: T) {
@@ -150,7 +150,7 @@ export function replaceTemplate<T extends Recordable>(tpl: string, context: T) {
       interpolate: /{{([\S\s]+?)}}/g,
     })
     return compiled(context)
-  } catch (err) {
+  } catch {
     return tpl
   }
 }
@@ -170,12 +170,12 @@ export function awaitTo<T, U = Error>(
 ): Promise<[U, undefined] | [null, T]> {
   return promise
     .then<[null, T]>((data: T) => [null, data])
-    .catch<[U, undefined]>((err: U) => {
+    .catch<[U, undefined]>((error: U) => {
       if (errorExt) {
-        const parsedError = Object.assign({}, err, errorExt)
+        const parsedError = Object.assign({}, error, errorExt)
         return [parsedError, undefined]
       }
 
-      return [err, undefined]
+      return [error, undefined]
     })
 }

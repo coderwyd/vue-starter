@@ -40,7 +40,7 @@ export function createStorage({
       const stringData = JSON.stringify({
         value,
         time: Date.now(),
-        expire: !isNil(expire) ? new Date().getTime() + expire * 1000 : null,
+        expire: !isNil(expire) ? Date.now() + expire * 1000 : null,
       })
       this.storage.setItem(this.getKey(key), stringData)
     }
@@ -58,10 +58,10 @@ export function createStorage({
       try {
         const data = JSON.parse(val)
         const { value, expire } = data
-        if (isNil(expire) || expire >= new Date().getTime()) return value
+        if (isNil(expire) || expire >= Date.now()) return value
 
         this.remove(key)
-      } catch (e) {
+      } catch {
         return def
       }
     }

@@ -144,9 +144,9 @@ export class VAxios {
         this.waitingQueue.forEach(cb => cb())
         config.data = { ...JSON.parse(config.data), token }
         return this.axiosInstance(config)
-      } catch (e) {
+      } catch (error) {
         this.waitingQueue.forEach(cb => cb())
-        return Promise.reject(e)
+        return Promise.reject(error)
       } finally {
         this.waitingQueue.length = 0
         this.refreshing = false
@@ -273,22 +273,22 @@ export class VAxios {
             try {
               const ret = transformResponseHook(res, opt)
               resolve(ret)
-            } catch (err) {
-              reject(err || new Error('request error!'))
+            } catch (error) {
+              reject(error || new Error('request error!'))
             }
             return
           }
           resolve(res as unknown as Promise<T>)
         })
-        .catch((e: Error | AxiosError) => {
+        .catch((error: Error | AxiosError) => {
           if (requestCatchHook && isFunction(requestCatchHook)) {
-            reject(requestCatchHook(e, opt))
+            reject(requestCatchHook(error, opt))
             return
           }
-          if (axios.isAxiosError(e)) {
+          if (axios.isAxiosError(error)) {
             // rewrite error message from axios in here
           }
-          reject(e)
+          reject(error)
         })
     })
   }

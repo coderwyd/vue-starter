@@ -10,7 +10,7 @@ export function joinTimestamp<T extends boolean>(
 export function joinTimestamp(join: boolean, restful = false): string | object {
   if (!join) return restful ? '' : {}
 
-  const now = new Date().getTime()
+  const now = Date.now()
   if (restful) return `?_t=${now}`
 
   return { _t: now }

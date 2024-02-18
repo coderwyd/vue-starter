@@ -9,7 +9,7 @@ export function useGlobSetting(): Readonly<GlobConfig> {
   const glob: Readonly<GlobConfig> = {
     title: VITE_GLOB_APP_TITLE,
     apiUrl: VITE_GLOB_API_URL,
-    shortName: VITE_GLOB_APP_TITLE.replace(/\s/g, '_').replace(/-/g, '_'),
+    shortName: VITE_GLOB_APP_TITLE.replaceAll(/\s/g, '_').replaceAll('-', '_'),
     uploadUrl: VITE_GLOB_UPLOAD_URL,
   }
   return glob as Readonly<GlobConfig>

@@ -70,7 +70,7 @@ export const useUserStore = defineStore({
     },
     setUserInfo(info: GetUserInfoResult | null) {
       this.userInfo = info
-      this.lastUpdateTime = new Date().getTime()
+      this.lastUpdateTime = Date.now()
       setAuthCache(USER_INFO_KEY, info)
     },
     resetState() {
