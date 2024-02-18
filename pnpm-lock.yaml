@@ -122,8 +122,8 @@ devDependencies:
     specifier: ^0.17.5
     version: 0.17.5(@vueuse/core@10.7.2)
   unplugin-icons:
-    specifier: ^0.18.3
-    version: 0.18.3
+    specifier: ^0.18.5
+    version: 0.18.5
   unplugin-vue-components:
     specifier: ^0.26.0
     version: 0.26.0(vue@3.4.15)
@@ -6918,8 +6918,8 @@ packages:
       - rollup
     dev: true
 
-  /unplugin-icons@0.18.3:
-    resolution: {integrity: sha512-6EHPMXOq7XL8JAULzX0o3KqOsJHhYfpDfB1WvBWwZJH/PutIkV/ahRpHytucQ1evfRFuv/DVIozEmFIhP1xRxA==}
+  /unplugin-icons@0.18.5:
+    resolution: {integrity: sha512-KVNAohXbZ7tVcG1C3p6QaC7wU9Qrj7etv4XvsMMJAxr5LccQZ+Iuv5LOIv/7GtqXaGN1BuFCqRO1ErsHEgEXdQ==}
     peerDependencies:
       '@svgr/core': '>=7.0.0'
       '@svgx/core': ^1.0.1
@@ -6940,7 +6940,7 @@ packages:
     dependencies:
       '@antfu/install-pkg': 0.3.1
       '@antfu/utils': 0.7.7
-      '@iconify/utils': 2.1.20
+      '@iconify/utils': 2.1.22
       debug: 4.3.4
       kolorist: 1.8.0
       local-pkg: 0.5.0
