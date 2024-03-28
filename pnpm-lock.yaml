@@ -110,8 +110,8 @@ devDependencies:
     specifier: ^0.13.3
     version: 0.13.3
   terser:
-    specifier: ^5.28.1
-    version: 5.28.1
+    specifier: ^5.30.0
+    version: 5.30.0
   typescript:
     specifier: ~5.3.3
     version: 5.3.3
@@ -129,7 +129,7 @@ devDependencies:
     version: 0.26.0(vue@3.4.21)
   vite:
     specifier: ^5.2.6
-    version: 5.2.6(@types/node@20.11.30)(sass@1.72.0)(terser@5.28.1)
+    version: 5.2.6(@types/node@20.11.30)(sass@1.72.0)(terser@5.30.0)
   vite-plugin-compression:
     specifier: ^0.5.1
     version: 0.5.1(vite@5.2.6)
@@ -159,8 +159,8 @@ packages:
     resolution: {integrity: sha512-lFMjJTrFL3j7L9yBxwYfCq2k6qqwHyzuUl/XBnif78PWTJYyL/dfowQHWE3sp6U6ZzqWiiIZnpTMO96zhkjwtg==}
     engines: {node: '>=6.0.0'}
     dependencies:
-      '@jridgewell/gen-mapping': 0.3.3
-      '@jridgewell/trace-mapping': 0.3.20
+      '@jridgewell/gen-mapping': 0.3.5
+      '@jridgewell/trace-mapping': 0.3.25
     dev: true
 
   /@ampproject/remapping@2.3.0:
@@ -262,8 +262,8 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/types': 7.23.9
-      '@jridgewell/gen-mapping': 0.3.3
-      '@jridgewell/trace-mapping': 0.3.20
+      '@jridgewell/gen-mapping': 0.3.5
+      '@jridgewell/trace-mapping': 0.3.25
       jsesc: 2.5.2
     dev: true
 
@@ -1385,15 +1385,6 @@ packages:
       wrap-ansi-cjs: /wrap-ansi@7.0.0
     dev: true
 
-  /@jridgewell/gen-mapping@0.3.3:
-    resolution: {integrity: sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==}
-    engines: {node: '>=6.0.0'}
-    dependencies:
-      '@jridgewell/set-array': 1.1.2
-      '@jridgewell/sourcemap-codec': 1.4.15
-      '@jridgewell/trace-mapping': 0.3.20
-    dev: true
-
   /@jridgewell/gen-mapping@0.3.5:
     resolution: {integrity: sha512-IzL8ZoEDIBRWEzlCcRhOaCupYyN5gdIK+Q6fbFdPDg6HqX6jpkItn7DFIpW9LQzXG6Df9sA7+OKnq0qlz/GaQg==}
     engines: {node: '>=6.0.0'}
@@ -1408,11 +1399,6 @@ packages:
     engines: {node: '>=6.0.0'}
     dev: true
 
-  /@jridgewell/set-array@1.1.2:
-    resolution: {integrity: sha512-xnkseuNADM0gt2bs+BvhO0p78Mk762YnZdsuzFV018NoG1Sj1SCQvpSqa7XUaTam5vAGasABV9qXASMKnFMwMw==}
-    engines: {node: '>=6.0.0'}
-    dev: true
-
   /@jridgewell/set-array@1.2.1:
     resolution: {integrity: sha512-R8gLRTZeyp03ymzP/6Lil/28tGeGEzhx1q2k703KGWRAI1VdvPIXdG70VJc2pAMw3NA6JKL5hhFu1sJX0Mnn/A==}
     engines: {node: '>=6.0.0'}
@@ -1421,19 +1407,12 @@ packages:
   /@jridgewell/source-map@0.3.5:
     resolution: {integrity: sha512-UTYAUj/wviwdsMfzoSJspJxbkH5o1snzwX0//0ENX1u/55kkZZkcTZP6u9bwKGkv+dkk9at4m1Cpt0uY80kcpQ==}
     dependencies:
-      '@jridgewell/gen-mapping': 0.3.3
-      '@jridgewell/trace-mapping': 0.3.20
+      '@jridgewell/gen-mapping': 0.3.5
+      '@jridgewell/trace-mapping': 0.3.25
     dev: true
 
   /@jridgewell/sourcemap-codec@1.4.15:
     resolution: {integrity: sha512-eF2rxCRulEKXHTRiDrDy6erMYWqNw4LPdQ8UQA4huuxaQsVeRPFl2oM8oDGxMFhJUWZf9McpLtJasDDZb/Bpeg==}
-
-  /@jridgewell/trace-mapping@0.3.20:
-    resolution: {integrity: sha512-R8LcPeWZol2zR8mmH3JeKQ6QRCFb7XgUhV9ZlGhHLGyg4wpPiPZNQOOWhFZhxKw8u//yTbNGI42Bx/3paXEQ+Q==}
-    dependencies:
-      '@jridgewell/resolve-uri': 3.1.1
-      '@jridgewell/sourcemap-codec': 1.4.15
-    dev: true
 
   /@jridgewell/trace-mapping@0.3.25:
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
@@ -2099,7 +2078,7 @@ packages:
       '@unocss/core': 0.58.6
       '@unocss/reset': 0.58.6
       '@unocss/vite': 0.58.6(vite@5.2.6)
-      vite: 5.2.6(@types/node@20.11.30)(sass@1.72.0)(terser@5.28.1)
+      vite: 5.2.6(@types/node@20.11.30)(sass@1.72.0)(terser@5.30.0)
     transitivePeerDependencies:
       - rollup
     dev: true
@@ -2297,7 +2276,7 @@ packages:
       chokidar: 3.6.0
       fast-glob: 3.3.2
       magic-string: 0.30.8
-      vite: 5.2.6(@types/node@20.11.30)(sass@1.72.0)(terser@5.28.1)
+      vite: 5.2.6(@types/node@20.11.30)(sass@1.72.0)(terser@5.30.0)
     transitivePeerDependencies:
       - rollup
     dev: true
@@ -2312,7 +2291,7 @@ packages:
       '@babel/core': 7.23.7
       '@babel/plugin-transform-typescript': 7.23.6(@babel/core@7.23.7)
       '@vue/babel-plugin-jsx': 1.1.5(@babel/core@7.23.7)
-      vite: 5.2.6(@types/node@20.11.30)(sass@1.72.0)(terser@5.28.1)
+      vite: 5.2.6(@types/node@20.11.30)(sass@1.72.0)(terser@5.30.0)
       vue: 3.4.21(typescript@5.3.3)
     transitivePeerDependencies:
       - supports-color
@@ -2325,7 +2304,7 @@ packages:
       vite: ^5.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 5.2.6(@types/node@20.11.30)(sass@1.72.0)(terser@5.28.1)
+      vite: 5.2.6(@types/node@20.11.30)(sass@1.72.0)(terser@5.30.0)
       vue: 3.4.21(typescript@5.3.3)
     dev: true
 
@@ -4677,7 +4656,7 @@ packages:
       he: 1.2.0
       param-case: 3.0.4
       relateurl: 0.2.7
-      terser: 5.28.1
+      terser: 5.30.0
     dev: true
 
   /html-tags@3.3.1:
@@ -7361,8 +7340,8 @@ packages:
       - supports-color
     dev: true
 
-  /terser@5.28.1:
-    resolution: {integrity: sha512-wM+bZp54v/E9eRRGXb5ZFDvinrJIOaTapx3WUokyVGZu5ucVCK55zEgGd5Dl2fSr3jUo5sDiERErUWLY6QPFyA==}
+  /terser@5.30.0:
+    resolution: {integrity: sha512-Y/SblUl5kEyEFzhMAQdsxVHh+utAxd4IuRNJzKywY/4uzSogh3G219jqbDDxYu4MXO9CzY3tSEqmZvW6AoEDJw==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
@@ -7600,7 +7579,7 @@ packages:
       '@unocss/transformer-directives': 0.58.6
       '@unocss/transformer-variant-group': 0.58.6
       '@unocss/vite': 0.58.6(vite@5.2.6)
-      vite: 5.2.6(@types/node@20.11.30)(sass@1.72.0)(terser@5.28.1)
+      vite: 5.2.6(@types/node@20.11.30)(sass@1.72.0)(terser@5.30.0)
     transitivePeerDependencies:
       - postcss
       - rollup
@@ -7758,7 +7737,7 @@ packages:
     peerDependencies:
       vite: ^2.6.0 || ^3.0.0 || ^4.0.0 || ^5.0.0-0
     dependencies:
-      vite: 5.2.6(@types/node@20.11.30)(sass@1.72.0)(terser@5.28.1)
+      vite: 5.2.6(@types/node@20.11.30)(sass@1.72.0)(terser@5.30.0)
     dev: true
 
   /vite-plugin-compression@0.5.1(vite@5.2.6):
@@ -7769,7 +7748,7 @@ packages:
       chalk: 4.1.2
       debug: 4.3.4
       fs-extra: 10.1.0
-      vite: 5.2.6(@types/node@20.11.30)(sass@1.72.0)(terser@5.28.1)
+      vite: 5.2.6(@types/node@20.11.30)(sass@1.72.0)(terser@5.30.0)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -7791,7 +7770,7 @@ packages:
       html-minifier-terser: 6.1.0
       node-html-parser: 5.4.2
       pathe: 0.2.0
-      vite: 5.2.6(@types/node@20.11.30)(sass@1.72.0)(terser@5.28.1)
+      vite: 5.2.6(@types/node@20.11.30)(sass@1.72.0)(terser@5.30.0)
     dev: true
 
   /vite-plugin-inspect@0.8.3(vite@5.2.6):
@@ -7813,7 +7792,7 @@ packages:
       perfect-debounce: 1.0.0
       picocolors: 1.0.0
       sirv: 2.0.4
-      vite: 5.2.6(@types/node@20.11.30)(sass@1.72.0)(terser@5.28.1)
+      vite: 5.2.6(@types/node@20.11.30)(sass@1.72.0)(terser@5.30.0)
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -7830,7 +7809,7 @@ packages:
       '@vue/devtools-shared': 7.0.20
       execa: 8.0.1
       sirv: 2.0.4
-      vite: 5.2.6(@types/node@20.11.30)(sass@1.72.0)(terser@5.28.1)
+      vite: 5.2.6(@types/node@20.11.30)(sass@1.72.0)(terser@5.30.0)
       vite-plugin-inspect: 0.8.3(vite@5.2.6)
       vite-plugin-vue-inspector: 4.0.2(vite@5.2.6)
     transitivePeerDependencies:
@@ -7854,12 +7833,12 @@ packages:
       '@vue/compiler-dom': 3.4.21
       kolorist: 1.8.0
       magic-string: 0.30.8
-      vite: 5.2.6(@types/node@20.11.30)(sass@1.72.0)(terser@5.28.1)
+      vite: 5.2.6(@types/node@20.11.30)(sass@1.72.0)(terser@5.30.0)
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /vite@5.2.6(@types/node@20.11.30)(sass@1.72.0)(terser@5.28.1):
+  /vite@5.2.6(@types/node@20.11.30)(sass@1.72.0)(terser@5.30.0):
     resolution: {integrity: sha512-FPtnxFlSIKYjZ2eosBQamz4CbyrTizbZ3hnGJlh/wMtCrlp1Hah6AzBLjGI5I2urTfNnpovpHdrL6YRuBOPnCA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -7892,7 +7871,7 @@ packages:
       postcss: 8.4.38
       rollup: 4.13.1
       sass: 1.72.0
-      terser: 5.28.1
+      terser: 5.30.0
     optionalDependencies:
       fsevents: 2.3.3
     dev: true
