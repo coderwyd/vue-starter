@@ -68,8 +68,8 @@ devDependencies:
     specifier: ^1.9.1
     version: 1.9.1
   czg:
-    specifier: ^1.9.0
-    version: 1.9.0
+    specifier: ^1.9.1
+    version: 1.9.1
   dotenv:
     specifier: ^16.4.5
     version: 16.4.5
@@ -3463,8 +3463,8 @@ packages:
     engines: {node: '>=v12.20.0'}
     dev: true
 
-  /czg@1.9.0:
-    resolution: {integrity: sha512-cYmC5/99kUGlnK1D8uXr4hykzC50MqzpMp3SlrE+w8wVzd9+0XxKsjWXhi+QIuDnzkx2CCvKSMT4xwDeaOD/xg==}
+  /czg@1.9.1:
+    resolution: {integrity: sha512-0+vLv7QkoY+YNpGrPjyw6SPqvaOlqQsNJqSI3SC2oh5jNDjMrw2VEWBUg/8j/GZWmn1zCR2ssA8yAG9WK7A5sA==}
     engines: {node: '>=v12.20.0'}
     hasBin: true
     dev: true
