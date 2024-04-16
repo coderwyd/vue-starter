@@ -48,7 +48,6 @@ export function isDevMode(): boolean {
 
 /**
  * @description: Is it a production mode
-
  */
 export function isProdMode(): boolean {
   return import.meta.env.PROD

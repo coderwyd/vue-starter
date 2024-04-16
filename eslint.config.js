@@ -2,7 +2,7 @@ import { defineConfig } from '@coderwyd/eslint-config'
 
 export default defineConfig(
   {
-    unocss: true
+    unocss: true,
   },
   {
     rules: {
