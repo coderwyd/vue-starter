@@ -110,8 +110,8 @@ devDependencies:
     specifier: ^3.2.0
     version: 3.2.0
   taze:
-    specifier: ^0.13.5
-    version: 0.13.5
+    specifier: ^0.13.6
+    version: 0.13.6
   terser:
     specifier: ^5.30.3
     version: 5.30.3
@@ -6588,8 +6588,8 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /taze@0.13.5:
-    resolution: {integrity: sha512-rqMiPMc20n2vJnWpFTCa9fkbRHl6NCUwk4g8Co+7TynpOgKP48bVkEBSQkUf7konzzF2Li5l94jruzZ8gHKnhA==}
+  /taze@0.13.6:
+    resolution: {integrity: sha512-u07uNpetujo56QQs5cNRafPDuSZYInbm+JvPaxQcZTzolMMombCQiaSvvbm6vNXpTCqU+gGRXcLYYSmSMIwt8Q==}
     hasBin: true
     dependencies:
       '@antfu/ni': 0.21.12
@@ -6599,7 +6599,6 @@ packages:
       execa: 8.0.1
       picocolors: 1.0.0
       prompts: 2.4.2
-      semver: 7.6.0
       ufo: 1.5.3
       unconfig: 0.3.13
       yargs: 17.7.2
