@@ -17,7 +17,7 @@
     "up": "taze major -r -I",
     "preview": "npm run build && vite preview",
     "preview:dist": "vite preview",
-    "type:check": "vue-tsc --noEmit --skipLibCheck",
+    "typecheck": "vue-tsc --noEmit --skipLibCheck",
     "svgo": "svgo -f src/assets/icons -o src/assets/icons",
     "clean:cache": "rimraf node_modules/.cache/ && rimraf node_modules/.vite",
     "clean:lib": "rimraf node_modules",
