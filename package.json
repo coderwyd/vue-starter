@@ -71,7 +71,7 @@
     "vite": "^5.2.10",
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-html": "^3.2.2",
-    "vite-plugin-vue-devtools": "^7.0.27",
+    "vite-plugin-vue-devtools": "^7.1.3",
     "vue-tsc": "^2.0.14"
   },
   "simple-git-hooks": {
