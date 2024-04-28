@@ -46,7 +46,7 @@
     "@vitejs/plugin-vue-jsx": "^3.1.0",
     "autoprefixer": "^10.4.19",
     "cross-env": "^7.0.3",
-    "cssnano": "^6.1.2",
+    "cssnano": "^7.0.1",
     "cz-git": "^1.9.1",
     "czg": "^1.9.1",
     "dotenv": "^16.4.5",
