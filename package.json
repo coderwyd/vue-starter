@@ -54,7 +54,7 @@
     "esno": "^4.7.0",
     "fs-extra": "^11.2.0",
     "lint-staged": "^15.2.2",
-    "picocolors": "^1.0.0",
+    "picocolors": "^1.0.1",
     "plop": "^4.0.1",
     "rimraf": "^5.0.7",
     "rollup-plugin-visualizer": "^5.12.0",

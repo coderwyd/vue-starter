@@ -91,8 +91,8 @@ importers:
         specifier: ^15.2.2
         version: 15.2.2
       picocolors:
-        specifier: ^1.0.0
-        version: 1.0.0
+        specifier: ^1.0.1
+        version: 1.0.1
       plop:
         specifier: ^4.0.1
         version: 4.0.1
@@ -2998,8 +2998,8 @@ packages:
   perfect-debounce@1.0.0:
     resolution: {integrity: sha512-xCy9V055GLEqoFaHoC1SoLIaLmWctgCUaBaWxDZ7/Zx4CTyX7cJQLJOok/orfjZAh9kEYpjJa4d0KcJmCbctZA==}
 
-  picocolors@1.0.0:
-    resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
+  picocolors@1.0.1:
+    resolution: {integrity: sha512-anP1Z8qwhkbmu7MFP5iTt+wQKXgwzf7zTyGlcdzabySa9vd0Xt392U0rVmz9poOaBj0uHJKyyo9/upk0HrEQew==}
 
   picomatch@2.3.1:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
@@ -4039,7 +4039,7 @@ snapshots:
   '@babel/code-frame@7.24.2':
     dependencies:
       '@babel/highlight': 7.24.2
-      picocolors: 1.0.0
+      picocolors: 1.0.1
 
   '@babel/compat-data@7.23.5': {}
 
@@ -4216,7 +4216,7 @@ snapshots:
       '@babel/helper-validator-identifier': 7.22.20
       chalk: 2.4.2
       js-tokens: 4.0.0
-      picocolors: 1.0.0
+      picocolors: 1.0.1
 
   '@babel/parser@7.24.4':
     dependencies:
@@ -4368,7 +4368,7 @@ snapshots:
       jsonc-eslint-parser: 2.4.0
       local-pkg: 0.5.0
       parse-gitignore: 2.0.0
-      picocolors: 1.0.0
+      picocolors: 1.0.1
       prettier: 3.2.5
       prettier-plugin-toml: 2.0.1(prettier@3.2.5)
       prompts: 2.4.2
@@ -5344,7 +5344,7 @@ snapshots:
       caniuse-lite: 1.0.30001599
       fraction.js: 4.3.7
       normalize-range: 0.1.2
-      picocolors: 1.0.0
+      picocolors: 1.0.1
       postcss: 8.4.38
       postcss-value-parser: 4.2.0
 
@@ -7149,7 +7149,7 @@ snapshots:
 
   perfect-debounce@1.0.0: {}
 
-  picocolors@1.0.0: {}
+  picocolors@1.0.1: {}
 
   picomatch@2.3.1: {}
 
@@ -7367,7 +7367,7 @@ snapshots:
   postcss@8.4.38:
     dependencies:
       nanoid: 3.3.7
-      picocolors: 1.0.0
+      picocolors: 1.0.1
       source-map-js: 1.2.0
 
   prelude-ls@1.2.1: {}
@@ -7714,7 +7714,7 @@ snapshots:
       css-tree: 2.3.1
       css-what: 6.1.0
       csso: 5.0.5
-      picocolors: 1.0.0
+      picocolors: 1.0.1
 
   synckit@0.6.2:
     dependencies:
@@ -7745,7 +7745,7 @@ snapshots:
       micromatch: 4.0.5
       normalize-path: 3.0.0
       object-hash: 3.0.0
-      picocolors: 1.0.0
+      picocolors: 1.0.1
       postcss: 8.4.38
       postcss-import: 15.1.0(postcss@8.4.38)
       postcss-js: 4.0.1(postcss@8.4.38)
@@ -7766,7 +7766,7 @@ snapshots:
       cli-progress: 3.12.0
       deepmerge: 4.3.1
       detect-indent: 7.0.1
-      picocolors: 1.0.0
+      picocolors: 1.0.1
       prompts: 2.4.2
       ufo: 1.5.3
       unconfig: 0.3.13
@@ -7964,7 +7964,7 @@ snapshots:
     dependencies:
       browserslist: 4.23.0
       escalade: 3.1.1
-      picocolors: 1.0.0
+      picocolors: 1.0.1
 
   upper-case-first@2.0.2:
     dependencies:
@@ -8025,7 +8025,7 @@ snapshots:
       fs-extra: 11.2.0
       open: 10.1.0
       perfect-debounce: 1.0.0
-      picocolors: 1.0.0
+      picocolors: 1.0.1
       sirv: 2.0.4
       vite: 5.2.11(@types/node@20.12.12)(sass@1.77.1)(terser@5.31.0)
     transitivePeerDependencies:
