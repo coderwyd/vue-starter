@@ -47,7 +47,7 @@
     "autoprefixer": "^10.4.19",
     "cross-env": "^7.0.3",
     "cssnano": "^7.0.1",
-    "cz-git": "^1.9.1",
+    "cz-git": "^1.9.2",
     "czg": "^1.9.1",
     "dotenv": "^16.4.5",
     "eslint": "^9.3.0",
