@@ -73,8 +73,8 @@ importers:
         specifier: ^1.9.2
         version: 1.9.2
       czg:
-        specifier: ^1.9.1
-        version: 1.9.1
+        specifier: ^1.9.2
+        version: 1.9.2
       dotenv:
         specifier: ^16.4.5
         version: 16.4.5
@@ -1684,8 +1684,8 @@ packages:
     resolution: {integrity: sha512-HqwSIZBl/Vtlq56wsHuQHhQ0CF7rABEvhvbSAaGViLeM5YucLu5o+U2XLow1Y2bwIAfAIKZHfgg9fxP7P3XU3Q==}
     engines: {node: '>=v12.20.0'}
 
-  czg@1.9.1:
-    resolution: {integrity: sha512-0+vLv7QkoY+YNpGrPjyw6SPqvaOlqQsNJqSI3SC2oh5jNDjMrw2VEWBUg/8j/GZWmn1zCR2ssA8yAG9WK7A5sA==}
+  czg@1.9.2:
+    resolution: {integrity: sha512-uPSKTIsAhZp1Tu7DRO7K68qPixVFyheRKlOGhuKXo2wdlpcE0hoCmTQAwsUTerKtjcFRnhRTpJ5j0bC6SOj01Q==}
     engines: {node: '>=v12.20.0'}
     hasBin: true
 
@@ -5862,7 +5862,7 @@ snapshots:
 
   cz-git@1.9.2: {}
 
-  czg@1.9.1: {}
+  czg@1.9.2: {}
 
   dayjs@1.11.11: {}
 
