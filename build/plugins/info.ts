@@ -19,7 +19,8 @@ export function viteBuildInfo(): Plugin {
       outDir = resolvedConfig.build?.outDir ?? 'dist'
     },
     buildStart() {
-      if (config.command === 'build') startTime = dayjs(new Date())
+      if (config.command === 'build')
+        startTime = dayjs(new Date())
     },
     closeBundle() {
       if (config.command === 'build') {

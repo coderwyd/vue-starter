@@ -19,6 +19,7 @@
     "typecheck": "vue-tsc --noEmit --skipLibCheck",
     "svgo": "svgo -f src/assets/icons -o src/assets/icons",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "postinstall": "simple-git-hooks"
   },
   "dependencies": {

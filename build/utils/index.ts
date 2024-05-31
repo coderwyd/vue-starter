@@ -8,7 +8,8 @@ function sum(arr: number[]) {
 }
 
 function formatBytes(bytes: number, decimals = 2) {
-  if (!+bytes) return '0 Bytes'
+  if (!+bytes)
+    return '0 Bytes'
 
   const k = 1024
   const dm = decimals < 0 ? 0 : decimals
@@ -25,18 +26,21 @@ export function getPackageSize(
   fileListTotal: number[] = [],
 ): void {
   readdir(folder, (err, files: string[]) => {
-    if (err) throw err
+    if (err)
+      throw err
     let count = 0
     const checkEnd = () => {
       ++count === files.length && callback(formatBytes(sum(fileListTotal)))
     }
     files.forEach((item: string) => {
       stat(`${folder}/${item}`, async (err, stats) => {
-        if (err) throw err
+        if (err)
+          throw err
         if (stats.isFile()) {
           fileListTotal.push(stats.size)
           checkEnd()
-        } else if (stats.isDirectory()) {
+        }
+        else if (stats.isDirectory()) {
           getPackageSize(`${folder}/${item}/`, checkEnd, fileListTotal)
         }
       })

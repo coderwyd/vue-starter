@@ -53,7 +53,8 @@ export class VAxios {
    * @description: Reconfigure axios
    */
   configAxios(config: CreateAxiosOptions) {
-    if (!this.axiosInstance) return
+    if (!this.axiosInstance)
+      return
 
     this.createAxios(config)
   }
@@ -62,7 +63,8 @@ export class VAxios {
    * @description: Set general header
    */
   setHeader(headers: any): void {
-    if (!this.axiosInstance) return
+    if (!this.axiosInstance)
+      return
 
     Object.assign(this.axiosInstance.defaults.headers, headers)
   }
@@ -73,7 +75,8 @@ export class VAxios {
   private setupInterceptors() {
     const transform = this.getTransform()
     // const { axiosInstance, options: { transform } } = this
-    if (!transform) return
+    if (!transform)
+      return
 
     const {
       requestInterceptors,
@@ -100,21 +103,22 @@ export class VAxios {
     )
 
     // Request interceptor error capture
-    requestInterceptorsCatch &&
-      isFunction(requestInterceptorsCatch) &&
-      this.axiosInstance.interceptors.request.use(
-        undefined,
-        requestInterceptorsCatch,
-      )
+    requestInterceptorsCatch
+    && isFunction(requestInterceptorsCatch)
+    && this.axiosInstance.interceptors.request.use(
+      undefined,
+      requestInterceptorsCatch,
+    )
 
     // Response result interceptor processing
     this.axiosInstance.interceptors.response.use(
       async (res: AxiosResponse<any>) => {
         if (
-          this.options.noSenseSwitchOn &&
-          res.data.resultCode === ResultEnum.EXPIRED
-        )
+          this.options.noSenseSwitchOn
+          && res.data.resultCode === ResultEnum.EXPIRED
+        ) {
           res = await this.refreshTokenAfterResponse(res.config)
+        }
 
         res && axiosCanceler.removePending(res.config)
         if (responseInterceptors && isFunction(responseInterceptors))
@@ -126,11 +130,11 @@ export class VAxios {
     )
 
     // Response result interceptor error capture
-    responseInterceptorsCatch &&
-      isFunction(responseInterceptorsCatch) &&
-      this.axiosInstance.interceptors.response.use(undefined, error => {
-        return responseInterceptorsCatch(this.axiosInstance, error)
-      })
+    responseInterceptorsCatch
+    && isFunction(responseInterceptorsCatch)
+    && this.axiosInstance.interceptors.response.use(undefined, (error) => {
+      return responseInterceptorsCatch(this.axiosInstance, error)
+    })
   }
 
   private async refreshTokenAfterResponse(
@@ -144,15 +148,18 @@ export class VAxios {
         this.waitingQueue.forEach(cb => cb())
         config.data = { ...JSON.parse(config.data), token }
         return this.axiosInstance(config)
-      } catch (error) {
+      }
+      catch (error) {
         this.waitingQueue.forEach(cb => cb())
         return Promise.reject(error)
-      } finally {
+      }
+      finally {
         this.waitingQueue.length = 0
         this.refreshing = false
       }
-    } else {
-      return new Promise(resolve => {
+    }
+    else {
+      return new Promise((resolve) => {
         this.waitingQueue.push(() => {
           const token = userStore.getAccessToken
           config.data = { ...JSON.parse(config.data), token }
@@ -174,10 +181,10 @@ export class VAxios {
     else formData.append(customFilename, params.file)
 
     if (params.data) {
-      Object.keys(params.data).forEach(key => {
+      Object.keys(params.data).forEach((key) => {
         const value = params.data![key]
         if (Array.isArray(value)) {
-          value.forEach(item => {
+          value.forEach((item) => {
             formData.append(`${key}[]`, item)
           })
           return
@@ -194,7 +201,7 @@ export class VAxios {
       headers: {
         'Content-type': ContentTypeEnum.FORM_DATA,
         // 1@ts-expect-error
-        ignoreCancelToken: true,
+        'ignoreCancelToken': true,
       },
     })
   }
@@ -205,11 +212,12 @@ export class VAxios {
     const contentType = headers?.['Content-Type'] || headers?.['content-type']
 
     if (
-      contentType !== ContentTypeEnum.FORM_URLENCODED ||
-      !Reflect.has(config, 'data') ||
-      config.method?.toUpperCase() === RequestEnum.GET
-    )
+      contentType !== ContentTypeEnum.FORM_URLENCODED
+      || !Reflect.has(config, 'data')
+      || config.method?.toUpperCase() === RequestEnum.GET
+    ) {
       return config
+    }
 
     return {
       ...config,
@@ -256,8 +264,8 @@ export class VAxios {
 
     const opt: RequestOptions = Object.assign({}, requestOptions, options)
 
-    const { beforeRequestHook, requestCatchHook, transformResponseHook } =
-      transform || {}
+    const { beforeRequestHook, requestCatchHook, transformResponseHook }
+      = transform || {}
     if (beforeRequestHook && isFunction(beforeRequestHook))
       conf = beforeRequestHook(conf, opt)
 
@@ -273,7 +281,8 @@ export class VAxios {
             try {
               const ret = transformResponseHook(res, opt)
               resolve(ret)
-            } catch (error) {
+            }
+            catch (error) {
               reject(error || new Error('request error!'))
             }
             return

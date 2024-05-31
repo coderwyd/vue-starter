@@ -8,7 +8,8 @@ module.exports = {
       name: 'name',
       message: 'store name:',
       validate(value) {
-        if (!value || value.trim === '') return 'name is required'
+        if (!value || value.trim === '')
+          return 'name is required'
 
         return true
       },

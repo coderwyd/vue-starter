@@ -103,7 +103,8 @@ export function deepMerge<
  * @returns The error message string. 错误信息字符串。
  */
 export function getErrorMessage(error): string {
-  if (error instanceof Error) return error.message
+  if (error instanceof Error)
+    return error.message
   else return String(error)
 }
 
@@ -111,7 +112,7 @@ export function getErrorMessage(error): string {
 export function getDynamicProps<T extends object, U>(props: T): Partial<U> {
   const ret: Recordable = {}
 
-  Object.keys(props).forEach(key => {
+  Object.keys(props).forEach((key) => {
     ret[key] = unref((props as Recordable)[key])
   })
 
@@ -147,10 +148,11 @@ export const kebabCase = cached((str: string): string => {
 export function replaceTemplate<T extends Recordable>(tpl: string, context: T) {
   try {
     const compiled = template(tpl, {
-      interpolate: /{{([\S\s]+?)}}/g,
+      interpolate: /\{\{([\s\S]+?)\}\}/g,
     })
     return compiled(context)
-  } catch {
+  }
+  catch {
     return tpl
   }
 }

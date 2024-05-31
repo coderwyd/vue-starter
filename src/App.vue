@@ -5,7 +5,7 @@ import { AppProvider } from '@/components/Application'
 <template>
   <AppProvider>
     <RouterView #="{ Component, route }">
-      <component :is="Component" :key="route.path" class="w-full h-full" />
+      <component :is="Component" :key="route.path" class="h-full w-full" />
     </RouterView>
   </AppProvider>
 </template>

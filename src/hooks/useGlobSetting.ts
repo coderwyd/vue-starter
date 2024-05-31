@@ -2,8 +2,8 @@ import { getAppEnvConfig } from '@/utils/env'
 import type { GlobConfig } from '#/config'
 
 export function useGlobSetting(): Readonly<GlobConfig> {
-  const { VITE_GLOB_APP_TITLE, VITE_GLOB_API_URL, VITE_GLOB_UPLOAD_URL } =
-    getAppEnvConfig()
+  const { VITE_GLOB_APP_TITLE, VITE_GLOB_API_URL, VITE_GLOB_UPLOAD_URL }
+    = getAppEnvConfig()
 
   // Take global configuration
   const glob: Readonly<GlobConfig> = {

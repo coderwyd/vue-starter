@@ -27,7 +27,7 @@ export class AxiosCanceler {
    * @description: 清除所有等待中的请求
    */
   public removeAllPending() {
-    pendingMap.forEach(abortController => {
+    pendingMap.forEach((abortController) => {
       abortController?.abort()
     })
     this.reset()

@@ -8,7 +8,8 @@ module.exports = {
       name: 'name',
       message: 'component name:',
       validate(value) {
-        if (!value || value.trim === '') return 'name is required'
+        if (!value || value.trim === '')
+          return 'name is required'
 
         return true
       },
@@ -35,7 +36,8 @@ module.exports = {
         },
       ],
       validate(value) {
-        if (value.includes('script') || value.includes('template')) return true
+        if (value.includes('script') || value.includes('template'))
+          return true
 
         return 'View require at least a <script> or <template> tag.'
       },

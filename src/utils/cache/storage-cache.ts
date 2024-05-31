@@ -53,15 +53,18 @@ export function createStorage({
      */
     get(key: string, def: any = null): any {
       const val = this.storage.getItem(this.getKey(key))
-      if (!val) return def
+      if (!val)
+        return def
 
       try {
         const data = JSON.parse(val)
         const { value, expire } = data
-        if (isNil(expire) || expire >= Date.now()) return value
+        if (isNil(expire) || expire >= Date.now())
+          return value
 
         this.remove(key)
-      } catch {
+      }
+      catch {
         return def
       }
     }

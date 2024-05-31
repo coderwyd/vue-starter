@@ -105,13 +105,15 @@ export const useUserStore = defineStore({
     async afterLoginAction(
       goHome?: boolean,
     ): Promise<Nullable<GetUserInfoResult>> {
-      if (!this.getAccessToken) return null
+      if (!this.getAccessToken)
+        return null
       const userInfo = await this.getUserInfoAction()
       goHome && (await router.replace(PageEnum.BASE_HOME))
       return userInfo
     },
     async getUserInfoAction(): Promise<Nullable<GetUserInfoResult>> {
-      if (!this.getAccessToken || !this.getUserUuid) return null
+      if (!this.getAccessToken || !this.getUserUuid)
+        return null
 
       const userInfo = await getUserInfoApi({
         userUuid: this.getUserUuid,
@@ -139,7 +141,8 @@ export const useUserStore = defineStore({
           await logoutApi({
             token: this.getAccessToken,
           })
-        } catch {
+        }
+        catch {
           console.log('logout error')
         }
       }
