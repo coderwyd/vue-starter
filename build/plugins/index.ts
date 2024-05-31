@@ -6,7 +6,6 @@ import { configCompressPlugin } from './compress'
 import { configHtmlPlugin } from './html'
 import { viteBuildInfo } from './info'
 import unplugin from './unplugin'
-import { configVisualizerConfig } from './visualizer'
 import type { PluginOption } from 'vite'
 
 interface Options {
@@ -18,7 +17,6 @@ interface Options {
 export function createVitePlugins({
   isBuild,
   compress,
-  enableAnalyze,
 }: Options) {
   const vitePlugins: (PluginOption | PluginOption[])[] = [
     vue(),
@@ -36,8 +34,6 @@ export function createVitePlugins({
     // rollup-plugin-gzip
     vitePlugins.push(configCompressPlugin({ compress }))
   }
-  // rollup-plugin-visualizer
-  if (enableAnalyze) vitePlugins.push(configVisualizerConfig())
 
   // build info
   vitePlugins.push(viteBuildInfo())
