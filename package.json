@@ -51,7 +51,7 @@
     "lint-staged": "^15.2.5",
     "picocolors": "^1.0.1",
     "plop": "^4.0.1",
-    "sass": "^1.77.4",
+    "sass": "^1.77.5",
     "simple-git-hooks": "^2.11.1",
     "svgo": "^3.3.2",
     "taze": "^0.13.8",
