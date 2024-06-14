@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       '@vueuse/core':
-        specifier: ^10.10.1
+        specifier: ^10.11.0
         version: 10.11.0(vue@3.4.27(typescript@5.4.5))
       axios:
         specifier: ^1.7.2
