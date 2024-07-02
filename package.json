@@ -33,7 +33,7 @@
     "vue-router": "^4.4.0"
   },
   "devDependencies": {
-    "@coderwyd/eslint-config": "^2.5.3",
+    "@coderwyd/eslint-config": "^2.5.6",
     "@types/fs-extra": "^11.0.4",
     "@types/lodash-es": "^4.17.12",
     "@types/node": "^20.14.9",
