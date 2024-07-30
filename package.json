@@ -39,7 +39,7 @@
     "@types/node": "^20.14.13",
     "@types/qs": "^6.9.15",
     "@unocss/eslint-plugin": "^0.61.5",
-    "@vitejs/plugin-vue": "^5.0.5",
+    "@vitejs/plugin-vue": "^5.1.1",
     "@vitejs/plugin-vue-jsx": "^4.0.0",
     "autoprefixer": "^10.4.19",
     "cross-env": "^7.0.3",
