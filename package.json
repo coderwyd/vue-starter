@@ -54,7 +54,7 @@
     "sass": "^1.77.8",
     "simple-git-hooks": "^2.11.1",
     "svgo": "^3.3.2",
-    "taze": "^0.16.1",
+    "taze": "^0.16.3",
     "terser": "^5.31.3",
     "typescript": "~5.5.4",
     "unocss": "^0.61.5",
