@@ -30,7 +30,7 @@
     "pinia": "^2.1.7",
     "qs": "^6.12.3",
     "vue": "^3.4.35",
-    "vue-router": "^4.4.2"
+    "vue-router": "^4.4.3"
   },
   "devDependencies": {
     "@coderwyd/eslint-config": "^2.5.3",
