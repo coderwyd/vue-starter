@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@vueuse/core": "^10.11.1",
-    "axios": "^1.7.3",
+    "axios": "^1.7.4",
     "dayjs": "^1.11.12",
     "lodash-es": "^4.17.21",
     "pinia": "^2.1.7",
