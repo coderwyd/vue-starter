@@ -23,7 +23,7 @@
     "postinstall": "simple-git-hooks"
   },
   "dependencies": {
-    "@vueuse/core": "^10.11.1",
+    "@vueuse/core": "^11.0.1",
     "axios": "^1.7.4",
     "dayjs": "^1.11.12",
     "lodash-es": "^4.17.21",
