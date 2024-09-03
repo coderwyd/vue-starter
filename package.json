@@ -43,7 +43,7 @@
     "eslint": "^9.9.0",
     "fs-extra": "^11.2.0",
     "lint-staged": "^15.2.9",
-    "picocolors": "^1.0.1",
+    "picocolors": "^1.1.0",
     "sass": "^1.77.8",
     "simple-git-hooks": "^2.11.1",
     "terser": "^5.31.6",
