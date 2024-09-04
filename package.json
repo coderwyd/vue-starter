@@ -38,7 +38,7 @@
     "@vitejs/plugin-vue": "^5.1.2",
     "@vitejs/plugin-vue-jsx": "^4.0.1",
     "cross-env": "^7.0.3",
-    "cssnano": "^7.0.5",
+    "cssnano": "^7.0.6",
     "dotenv": "^16.4.5",
     "eslint": "^9.9.0",
     "fs-extra": "^11.2.0",
