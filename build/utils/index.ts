@@ -22,6 +22,7 @@ function formatBytes(bytes: number, decimals = 2) {
 
 export function getPackageSize(
   folder: string,
+  // eslint-disable-next-line ts/no-unsafe-function-type
   callback: Function,
   fileListTotal: number[] = [],
 ): void {
@@ -30,10 +31,12 @@ export function getPackageSize(
       throw err
     let count = 0
     const checkEnd = () => {
-      ++count === files.length && callback(formatBytes(sum(fileListTotal)))
+      if (++count === files.length) {
+        callback(formatBytes(sum(fileListTotal)))
+      }
     }
     files.forEach((item: string) => {
-      stat(`${folder}/${item}`, async (err, stats) => {
+      stat(`${folder}/${item}`, (err, stats) => {
         if (err)
           throw err
         if (stats.isFile()) {
@@ -45,7 +48,9 @@ export function getPackageSize(
         }
       })
     })
-    files.length === 0 && callback()
+    if (files.length === 0) {
+      callback()
+    }
   })
 }
 

@@ -1,6 +1,6 @@
+import type { GlobEnvConfig } from '#/config'
 import { useGlobSetting } from '@/hooks/useGlobSetting'
 import pkg from '../../package.json'
-import type { GlobEnvConfig } from '#/config'
 
 function getCommonStoragePrefix() {
   const { shortName } = useGlobSetting()

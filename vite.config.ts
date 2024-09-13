@@ -1,6 +1,6 @@
 import { defineConfig, loadEnv } from 'vite'
-import { createVitePlugins, getRootPath, getSrcPath } from './build'
 import type { ConfigEnv, UserConfig } from 'vite'
+import { createVitePlugins, getRootPath, getSrcPath } from './build'
 
 export default defineConfig(({ command, mode }: ConfigEnv): UserConfig => {
   const root = getRootPath()

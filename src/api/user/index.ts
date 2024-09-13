@@ -1,3 +1,4 @@
+import type { Result } from '#/axios'
 import { request } from '@/utils/http'
 import type {
   AddOrModOrDelFamilyMemberParams,
@@ -13,7 +14,6 @@ import type {
   SendVerificationCodeParams,
   SendVerificationCodeResult,
 } from './types'
-import type { Result } from '#/axios'
 
 enum Api {
   ResidentSelfRegistrationByH5 = '/ecomm-biz-http/icontrol/http/safety/mustering/v1.0/residentSelfRegistrationByH5',

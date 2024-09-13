@@ -1,6 +1,6 @@
 import { isNumber } from 'lodash-es'
-import { PageEnum } from '@/enums/pageEnum'
 import type { RouteLocationRaw, Router } from 'vue-router'
+import { PageEnum } from '@/enums/pageEnum'
 
 export type PathAsPageEnum<T> = T extends { path: string }
   ? T & { path: PageEnum }
@@ -25,7 +25,12 @@ export function useGo(_router?: Router) {
       router.go(opt)
       return
     }
-    isReplace ? replace(opt).catch(handleError) : push(opt).catch(handleError)
+    if (isReplace) {
+      replace(opt).catch(handleError)
+    }
+    else {
+      push(opt).catch(handleError)
+    }
   }
   return go
 }

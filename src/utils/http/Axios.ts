@@ -1,8 +1,7 @@
 import axios from 'axios'
 import { cloneDeep, isFunction } from 'lodash-es'
 import qs from 'qs'
-import { ContentTypeEnum, RequestEnum, ResultEnum } from '@/enums/httpEnum'
-import { AxiosCanceler } from './axios-cancel'
+import type { RequestOptions, Result, UploadFileParams } from '#/axios'
 import type {
   AxiosError,
   AxiosInstance,
@@ -10,8 +9,9 @@ import type {
   AxiosResponse,
   InternalAxiosRequestConfig,
 } from 'axios'
+import { ContentTypeEnum, RequestEnum, ResultEnum } from '@/enums/httpEnum'
+import { AxiosCanceler } from './axios-cancel'
 import type { CreateAxiosOptions } from './axios-transform'
-import type { RequestOptions, Result, UploadFileParams } from '#/axios'
 
 // import { getAccessToken } from '@/utils/auth'
 
@@ -24,6 +24,7 @@ export class VAxios {
   private axiosInstance: AxiosInstance
   private readonly options: CreateAxiosOptions
 
+  // eslint-disable-next-line ts/no-unsafe-function-type
   private waitingQueue: Function[] = []
   private refreshing = false
 
@@ -93,7 +94,9 @@ export class VAxios {
         // If cancel repeat request is turned on, then cancel repeat request is prohibited
         const { requestOptions } = this.options
         const ignoreCancelToken = requestOptions?.ignoreCancelToken ?? true
-        !ignoreCancelToken && axiosCanceler.addPending(config)
+        if (!ignoreCancelToken) {
+          axiosCanceler.addPending(config)
+        }
         if (requestInterceptors && isFunction(requestInterceptors))
           config = requestInterceptors(config, this.options)
 
@@ -103,12 +106,12 @@ export class VAxios {
     )
 
     // Request interceptor error capture
-    requestInterceptorsCatch
-    && isFunction(requestInterceptorsCatch)
-    && this.axiosInstance.interceptors.request.use(
-      undefined,
-      requestInterceptorsCatch,
-    )
+    if (requestInterceptorsCatch && isFunction(requestInterceptorsCatch)) {
+      this.axiosInstance.interceptors.request.use(
+        undefined,
+        requestInterceptorsCatch,
+      )
+    }
 
     // Response result interceptor processing
     this.axiosInstance.interceptors.response.use(
@@ -120,7 +123,9 @@ export class VAxios {
           res = await this.refreshTokenAfterResponse(res.config)
         }
 
-        res && axiosCanceler.removePending(res.config)
+        if (res) {
+          axiosCanceler.removePending(res.config)
+        }
         if (responseInterceptors && isFunction(responseInterceptors))
           res = responseInterceptors(res)
 
@@ -130,11 +135,11 @@ export class VAxios {
     )
 
     // Response result interceptor error capture
-    responseInterceptorsCatch
-    && isFunction(responseInterceptorsCatch)
-    && this.axiosInstance.interceptors.response.use(undefined, (error) => {
-      return responseInterceptorsCatch(this.axiosInstance, error)
-    })
+    if (responseInterceptorsCatch && isFunction(responseInterceptorsCatch)) {
+      this.axiosInstance.interceptors.response.use(undefined, (error) => {
+        return responseInterceptorsCatch(this.axiosInstance, error)
+      })
+    }
   }
 
   private async refreshTokenAfterResponse(

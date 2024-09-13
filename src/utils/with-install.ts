@@ -1,5 +1,5 @@
-import { camelize, kebabCase } from '@/utils'
 import type { App, Component, Plugin } from 'vue'
+import { camelize, kebabCase } from '@/utils'
 
 export type SFCWithInstall<T> = T & Plugin
 

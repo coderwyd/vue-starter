@@ -1,9 +1,9 @@
 import dayjs from 'dayjs'
 import duration from 'dayjs/plugin/duration'
 import pico from 'picocolors'
-import { getPackageSize } from '../utils'
-import type { Plugin } from 'vite'
 import type { Dayjs } from 'dayjs'
+import type { Plugin } from 'vite'
+import { getPackageSize } from '../utils'
 
 dayjs.extend(duration)
 

@@ -2,11 +2,11 @@ import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import unocss from 'unocss/vite'
 import vueDevTools from 'vite-plugin-vue-devtools'
+import type { PluginOption } from 'vite'
 import { configCompressPlugin } from './compress'
 import { configHtmlPlugin } from './html'
 import { viteBuildInfo } from './info'
 import unplugin from './unplugin'
-import type { PluginOption } from 'vite'
 
 interface Options {
   isBuild: boolean

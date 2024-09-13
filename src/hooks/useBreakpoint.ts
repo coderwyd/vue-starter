@@ -1,5 +1,5 @@
-import { screenEnum, screenMap, sizeEnum } from '@/enums/breakpointEnum'
 import type { ComputedRef } from 'vue'
+import { screenEnum, screenMap, sizeEnum } from '@/enums/breakpointEnum'
 
 let globalScreenRef: ComputedRef<sizeEnum | undefined>
 let globalWidthRef: ComputedRef<number>

@@ -1,14 +1,14 @@
 import axios from 'axios'
 import { clone, isString } from 'lodash-es'
+import type { RequestOptions, Result } from '#/axios'
+import type { AxiosInstance, AxiosResponse } from 'axios'
 import { ContentTypeEnum, RequestEnum, ResultEnum } from '@/enums/httpEnum'
-import { appendUrlParams, deepMerge } from '@/utils'
 import { useGlobSetting } from '@/hooks/useGlobSetting'
+import { appendUrlParams, deepMerge } from '@/utils'
 import { VAxios } from './Axios'
 import { AxiosRetry } from './axios-retry'
 import { formatRequestDate, joinTimestamp } from './helper'
 import type { AxiosTransform, CreateAxiosOptions } from './axios-transform'
-import type { AxiosInstance, AxiosResponse } from 'axios'
-import type { RequestOptions, Result } from '#/axios'
 
 const globSetting = useGlobSetting()
 
@@ -55,7 +55,9 @@ const transform: AxiosTransform = {
 
     const params = config.params || {}
     const data = config.data || false
-    formatDate && data && !isString(data) && formatRequestDate(data)
+    if (formatDate && data && !isString(data)) {
+      formatRequestDate(data)
+    }
     if (config.method?.toUpperCase() === RequestEnum.GET) {
       if (!isString(params)) {
         // 给 get 请求加上时间戳参数，避免从缓存中拿数据。
@@ -72,12 +74,13 @@ const transform: AxiosTransform = {
     }
     else {
       if (!isString(params)) {
-        formatDate && formatRequestDate(params)
+        if (formatDate)
+          formatRequestDate(params)
         if (
           Reflect.has(config, 'data')
           && config.data
           && (Object.keys(config.data).length > 0
-          || config.data instanceof FormData)
+            || config.data instanceof FormData)
         ) {
           config.data = data
           config.params = params

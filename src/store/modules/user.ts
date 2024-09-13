@@ -5,6 +5,7 @@ import {
   loginAccountApi,
   logoutApi,
 } from '@/api/user'
+import type { GetUserInfoResult, LoginAccountParams } from '@/api/user/types'
 import {
   ACCESS_TOKEN_KEY,
   REFRESH_TOKEN_KEY,
@@ -17,7 +18,6 @@ import { router } from '@/router'
 import { store } from '@/store'
 import { getAuthCache, setAuthCache } from '@/utils/auth'
 import { ss } from '@/utils/cache'
-import type { GetUserInfoResult, LoginAccountParams } from '@/api/user/types'
 
 interface UserState {
   userInfo: Nullable<GetUserInfoResult>
@@ -96,7 +96,7 @@ export const useUserStore = defineStore({
         this.setUserUuid(userUuid)
         return this.afterLoginAction(goHome)
       }
-      // eslint-disable-next-line prefer-promise-reject-errors
+
       return Promise.reject({
         resultCode,
         message,
@@ -108,13 +108,12 @@ export const useUserStore = defineStore({
       if (!this.getAccessToken)
         return null
       const userInfo = await this.getUserInfoAction()
-      goHome && (await router.replace(PageEnum.BASE_HOME))
+      if (goHome) {
+        await router.replace(PageEnum.BASE_HOME)
+      }
       return userInfo
     },
     async getUserInfoAction(): Promise<Nullable<GetUserInfoResult>> {
-      if (!this.getAccessToken || !this.getUserUuid)
-        return null
-
       const userInfo = await getUserInfoApi({
         userUuid: this.getUserUuid,
       })
@@ -150,7 +149,9 @@ export const useUserStore = defineStore({
       this.setRefreshToken(undefined)
       this.setUserInfo(null)
       ss.set('operationType', 'signIn')
-      goLogin && router.push(PageEnum.BASE_HOME)
+      if (goLogin) {
+        router.push(PageEnum.BASE_HOME)
+      }
     },
   },
 })
