@@ -103,8 +103,7 @@ export function deepMerge<
  * @returns The error message string. 错误信息字符串。
  */
 export function getErrorMessage(error): string {
-  if (error instanceof Error)
-    return error.message
+  if (error instanceof Error) return error.message
   else return String(error)
 }
 
@@ -151,14 +150,13 @@ export function replaceTemplate<T extends Recordable>(tpl: string, context: T) {
       interpolate: /\{\{([\s\S]+?)\}\}/g,
     })
     return compiled(context)
-  }
-  catch {
+  } catch {
     return tpl
   }
 }
 
 export function delay(waitTime: number) {
-  return new Promise(resolve => setTimeout(resolve, waitTime))
+  return new Promise((resolve) => setTimeout(resolve, waitTime))
 }
 
 /**

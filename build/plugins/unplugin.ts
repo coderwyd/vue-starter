@@ -14,8 +14,9 @@ export default [
   }),
   Icons({
     customCollections: {
-      custom: FileSystemIconLoader(getSrcPath('src/assets/icons'), svg =>
-        svg.replace(/^<svg /, '<svg fill="currentColor" ')),
+      custom: FileSystemIconLoader(getSrcPath('src/assets/icons'), (svg) =>
+        svg.replace(/^<svg /, '<svg fill="currentColor" '),
+      ),
     },
   }),
   Components({

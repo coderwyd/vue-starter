@@ -13,10 +13,7 @@
       "#/*": ["types/*"]
     },
     "resolveJsonModule": true,
-    "types": [
-      "vite/client",
-      "unplugin-icons/types/vue"
-    ],
+    "types": ["vite/client", "unplugin-icons/types/vue"],
     "allowJs": true,
     "strict": true,
     "strictFunctionTypes": false,

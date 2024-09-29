@@ -8,12 +8,10 @@ export function joinTimestamp<T extends boolean>(
 ): T extends true ? string : object
 
 export function joinTimestamp(join: boolean, restful = false): string | object {
-  if (!join)
-    return restful ? '' : {}
+  if (!join) return restful ? '' : {}
 
   const now = Date.now()
-  if (restful)
-    return `?_t=${now}`
+  if (restful) return `?_t=${now}`
 
   return { _t: now }
 }
@@ -22,8 +20,7 @@ export function joinTimestamp(join: boolean, restful = false): string | object {
  * @description: Format request parameter time
  */
 export function formatRequestDate(params: Recordable) {
-  if (Object.prototype.toString.call(params) !== '[object Object]')
-    return
+  if (Object.prototype.toString.call(params) !== '[object Object]') return
 
   for (const key in params) {
     const format = params[key]?.format ?? null
@@ -35,13 +32,11 @@ export function formatRequestDate(params: Recordable) {
       if (value) {
         try {
           params[key] = isString(value) ? value.trim() : value
-        }
-        catch (error: any) {
+        } catch (error: any) {
           throw new Error(error)
         }
       }
     }
-    if (isObject(params[key]))
-      formatRequestDate(params[key])
+    if (isObject(params[key])) formatRequestDate(params[key])
   }
 }

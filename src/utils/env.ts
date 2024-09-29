@@ -12,8 +12,8 @@ export function getStorageShortName() {
 }
 
 export function getAppEnvConfig(): GlobEnvConfig {
-  const { VITE_GLOB_APP_TITLE, VITE_GLOB_API_URL, VITE_GLOB_UPLOAD_URL }
-    = import.meta.env
+  const { VITE_GLOB_APP_TITLE, VITE_GLOB_API_URL, VITE_GLOB_UPLOAD_URL } =
+    import.meta.env
 
   return {
     VITE_GLOB_APP_TITLE,

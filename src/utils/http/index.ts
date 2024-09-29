@@ -28,21 +28,18 @@ const transform: AxiosTransform = {
       return res.data
 
     // 是否返回原生响应头 比如：需要获取响应头时使用该属性
-    if (isReturnNativeResponse)
-      return res
+    if (isReturnNativeResponse) return res
 
     // 不进行任何处理，直接返回
     // 用于页面代码可能需要直接获取code，data，message这些信息时开启
-    if (!isTransformResponse)
-      return res.data
+    if (!isTransformResponse) return res.data
 
     const { resultCode, data: result } = res.data
-    const hasSuccess
-      = res.data
-      && Reflect.has(res.data, 'resultCode')
-      && resultCode === ResultEnum.SUCCESS
-    if (hasSuccess)
-      return result
+    const hasSuccess =
+      res.data &&
+      Reflect.has(res.data, 'resultCode') &&
+      resultCode === ResultEnum.SUCCESS
+    if (hasSuccess) return result
     throw new Error('The interface request failed, please try again later!')
   },
 
@@ -50,8 +47,7 @@ const transform: AxiosTransform = {
   beforeRequestHook: (config, options) => {
     const { apiUrl, joinParamsToUrl, formatDate, joinTime = true } = options
 
-    if (apiUrl && isString(apiUrl))
-      config.url = `${apiUrl}${config.url}`
+    if (apiUrl && isString(apiUrl)) config.url = `${apiUrl}${config.url}`
 
     const params = config.params || {}
     const data = config.data || false
@@ -65,27 +61,23 @@ const transform: AxiosTransform = {
           params || {},
           joinTimestamp(joinTime, false),
         )
-      }
-      else {
+      } else {
         // 兼容restful风格
         config.url = `${config.url + params}${joinTimestamp(joinTime, true)}`
         config.params = undefined
       }
-    }
-    else {
+    } else {
       if (!isString(params)) {
-        if (formatDate)
-          formatRequestDate(params)
+        if (formatDate) formatRequestDate(params)
         if (
-          Reflect.has(config, 'data')
-          && config.data
-          && (Object.keys(config.data).length > 0
-            || config.data instanceof FormData)
+          Reflect.has(config, 'data') &&
+          config.data &&
+          (Object.keys(config.data).length > 0 ||
+            config.data instanceof FormData)
         ) {
           config.data = data
           config.params = params
-        }
-        else {
+        } else {
           // 非GET请求如果没有提供data，则将params视为data
           config.data = params
           config.params = undefined
@@ -96,8 +88,7 @@ const transform: AxiosTransform = {
             Object.assign({}, config.params, config.data),
           )
         }
-      }
-      else {
+      } else {
         // 兼容restful风格
         config.url = config.url + params
         config.params = undefined
@@ -131,13 +122,12 @@ const transform: AxiosTransform = {
     const { config } = error || {}
     const err: string = error?.toString?.() ?? ''
     let errMessage = ''
-    if (axios.isCancel(error))
-      return Promise.reject(error)
+    if (axios.isCancel(error)) return Promise.reject(error)
 
     try {
       if (err?.includes('Network Error')) {
-        errMessage
-          = 'Please check if your network connection is normal! The network is abnormal.'
+        errMessage =
+          'Please check if your network connection is normal! The network is abnormal.'
       }
 
       if (errMessage) {
@@ -145,14 +135,12 @@ const transform: AxiosTransform = {
         // showFailToast(errMessage)
         return Promise.reject(error)
       }
-    }
-    catch (error) {
+    } catch (error) {
       throw new Error(error as unknown as string)
     }
     const retryRequest = new AxiosRetry()
     const { isOpenRetry } = config.requestOptions.retryRequest
-    if (isOpenRetry)
-      return retryRequest.retry(axiosInstance, error)
+    if (isOpenRetry) return retryRequest.retry(axiosInstance, error)
 
     return Promise.reject(error)
   },

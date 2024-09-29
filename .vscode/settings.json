@@ -1,11 +1,8 @@
 {
   "typescript.tsdk": "./node_modules/typescript/lib",
   "npm.packageManager": "pnpm",
-  // Enable the ESlint flat config support
-  "eslint.experimental.useFlatConfig": true,
 
-  // Disable the default formatter, use eslint instead
-  "prettier.enable": false,
+  "prettier.enable": true,
   "editor.formatOnSave": false,
 
   // Auto fix
@@ -14,24 +11,9 @@
     "source.organizeImports": "never"
   },
 
-  // Enable eslint for all supported languages
-  "eslint.validate": [
-    "html",
-    "css",
-    "less",
-    "scss",
-    "json",
-    "jsonc",
-    "yaml",
-    "yml",
-    "markdown",
-    "toml"
-  ],
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
-  "stylelint.enable": true,
-  "stylelint.validate": ["css", "less", "postcss", "scss", "vue", "sass"],
   // "path-intellisense.mappings": {
   //   "@/": "${workspaceRoot}/",
   //   "#/": "${workspaceRoot}/"

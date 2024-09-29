@@ -10,8 +10,7 @@ export default defineComponent({
     const isMobile = ref(false)
     createBreakpointListen(({ screenMap, sizeEnum, width }) => {
       const mdWidth = screenMap.get(sizeEnum.MD)
-      if (mdWidth)
-        isMobile.value = width.value - 1 < mdWidth
+      if (mdWidth) isMobile.value = width.value - 1 < mdWidth
     })
     createAppProviderContext({ isMobile })
 
