@@ -1,8 +1,0 @@
-const process = require('node:process')
-
-module.exports = {
-  plugins: {
-    autoprefixer: {},
-    ...(process.env.NODE_ENV === 'production' ? { cssnano: {} } : {}),
-  },
-}
