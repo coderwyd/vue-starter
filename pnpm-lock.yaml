@@ -46,8 +46,8 @@ importers:
         specifier: ^22.8.7
         version: 22.8.7
       '@types/qs':
-        specifier: ^6.9.16
-        version: 6.9.16
+        specifier: ^6.9.17
+        version: 6.9.17
       '@unocss/eslint-plugin':
         specifier: ^0.63.6
         version: 0.63.6(eslint@9.13.0(jiti@2.0.0))(typescript@5.6.3)
@@ -962,8 +962,8 @@ packages:
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
 
-  '@types/qs@6.9.16':
-    resolution: {integrity: sha512-7i+zxXdPD0T4cKDuxCUXJ4wHcsJLwENa6Z3dCu8cfCK743OGy5Nu1RmAGqDPsoTDINVEcdXKRvR/zre+P2Ku1A==}
+  '@types/qs@6.9.17':
+    resolution: {integrity: sha512-rX4/bPcfmvxHDv0XjfJELTTr+iB+tn032nPILqHm5wbthUUUuVtNGGqzhya9XUxjTP8Fpr0qYgSZZKxGY++svQ==}
 
   '@types/web-bluetooth@0.0.20':
     resolution: {integrity: sha512-g9gZnnXVq7gM7v3tJCWV/qw7w+KeOlSHAhgF9RytFyifW6AF61hdT2ucrYhPq9hLs5JIryeupHV3qGk95dH9ow==}
@@ -3932,7 +3932,7 @@ snapshots:
 
   '@types/normalize-package-data@2.4.4': {}
 
-  '@types/qs@6.9.16': {}
+  '@types/qs@6.9.17': {}
 
   '@types/web-bluetooth@0.0.20': {}
 
