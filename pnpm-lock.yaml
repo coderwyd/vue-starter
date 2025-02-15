@@ -82,7 +82,7 @@ importers:
         specifier: ^2.11.1
         version: 2.11.1
       terser:
-        specifier: ^5.38.2
+        specifier: ^5.39.0
         version: 5.39.0
       typescript:
         specifier: ^5.7.3
