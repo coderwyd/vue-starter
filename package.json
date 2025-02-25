@@ -55,7 +55,7 @@
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-html": "^3.2.2",
     "vite-plugin-vue-devtools": "^7.7.2",
-    "vue-tsc": "^2.2.2"
+    "vue-tsc": "^2.2.4"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
