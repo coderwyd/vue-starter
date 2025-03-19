@@ -1,6 +1,0 @@
-@mixin transition-default() {
-  &-enter-active,
-  &-leave-active {
-    transition: all 0.2s ease;
-  }
-}

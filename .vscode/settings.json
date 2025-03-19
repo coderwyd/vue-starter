@@ -3,7 +3,8 @@
   "npm.packageManager": "pnpm",
 
   "prettier.enable": true,
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
 
   // Auto fix
   "editor.codeActionsOnSave": {
@@ -11,9 +12,6 @@
     "source.organizeImports": "never"
   },
 
-  "css.validate": false,
-  "less.validate": false,
-  "scss.validate": false,
   // "path-intellisense.mappings": {
   //   "@/": "${workspaceRoot}/",
   //   "#/": "${workspaceRoot}/"

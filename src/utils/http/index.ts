@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { clone, isString } from 'lodash-es'
-import type { RequestOptions, Result } from '#/axios'
 import type { AxiosInstance, AxiosResponse } from 'axios'
+import type { RequestOptions, Result } from '#/axios'
 import { ContentTypeEnum, RequestEnum, ResultEnum } from '@/enums/httpEnum'
 import { useGlobSetting } from '@/hooks/useGlobSetting'
 import { appendUrlParams, deepMerge } from '@/utils'

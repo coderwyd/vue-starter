@@ -27,8 +27,7 @@ interface UserState {
   lastUpdateTime: number
 }
 
-export const useUserStore = defineStore({
-  id: 'app-user',
+export const useUserStore = defineStore('app-user',{
   state: (): UserState => ({
     userInfo: null,
     accessToken: undefined,

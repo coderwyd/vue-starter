@@ -33,7 +33,7 @@ export function appendUrlParams(baseUrl: string, obj: any): string {
   for (const key in obj) parameters += `${key}=${encodeURIComponent(obj[key])}&`
 
   parameters = parameters.replace(/&$/, '')
-  return /\?$/.test(baseUrl)
+  return baseUrl.endsWith("?")
     ? baseUrl + parameters
     : baseUrl.replace(/\/?$/, '?') + parameters
 }

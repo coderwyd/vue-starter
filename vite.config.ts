@@ -43,11 +43,6 @@ export default defineConfig(({ command, mode }: ConfigEnv): UserConfig => {
     }),
     css: {
       devSourcemap: true,
-      preprocessorOptions: {
-        scss: {
-          javascriptEnabled: true,
-        },
-      },
     },
   }
 })

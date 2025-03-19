@@ -1,7 +1,6 @@
 import axios from 'axios'
 import { cloneDeep, isFunction } from 'lodash-es'
 import qs from 'qs'
-import type { RequestOptions, Result, UploadFileParams } from '#/axios'
 import type {
   AxiosError,
   AxiosInstance,
@@ -9,6 +8,7 @@ import type {
   AxiosResponse,
   InternalAxiosRequestConfig,
 } from 'axios'
+import type { RequestOptions, Result, UploadFileParams } from '#/axios'
 import { ContentTypeEnum, RequestEnum, ResultEnum } from '@/enums/httpEnum'
 import { AxiosCanceler } from './axios-cancel'
 import type { CreateAxiosOptions } from './axios-transform'

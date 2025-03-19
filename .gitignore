@@ -25,3 +25,6 @@ pnpm-debug.log*
 *.sw?
 
 .history
+
+types/components.d.ts
+types/auto-imports.d.ts
