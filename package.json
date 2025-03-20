@@ -67,7 +67,7 @@
       "simple-git-hooks"
     ],
     "overrides": {
-      "is-core-module": "npm:@nolyfill/is-core-module@^1",
+      "is-core-module": "npm:@nolyfill/is-core-module@^1.0.39",
       "side-channel": "npm:@nolyfill/side-channel@^1"
     }
   },
