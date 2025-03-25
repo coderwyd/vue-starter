@@ -2,7 +2,7 @@
   "name": "vue-starter",
   "type": "module",
   "version": "1.0.0",
-  "packageManager": "pnpm@10.6.4",
+  "packageManager": "pnpm@10.6.5",
   "scripts": {
     "bootstrap": "npm install",
     "start": "npm run dev",
