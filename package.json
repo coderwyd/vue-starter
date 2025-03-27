@@ -52,7 +52,7 @@
     "terser": "^5.39.0",
     "typescript": "^5.8.2",
     "unocss": "^66.0.0",
-    "unplugin-auto-import": "^19.1.1",
+    "unplugin-auto-import": "^19.1.2",
     "unplugin-icons": "^22.1.0",
     "unplugin-vue-components": "^28.4.1",
     "vite": "^6.2.2",
