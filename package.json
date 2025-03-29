@@ -41,7 +41,7 @@
     "@vitejs/plugin-vue-jsx": "^4.1.2",
     "cross-env": "^7.0.3",
     "dotenv": "^16.4.7",
-    "eslint": "^9.22.0",
+    "eslint": "^9.23.0",
     "eslint-plugin-oxlint": "^0.16.3",
     "fs-extra": "^11.3.0",
     "lint-staged": "^15.5.0",
