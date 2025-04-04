@@ -34,7 +34,7 @@
     "@coderwyd/eslint-config": "^4.2.0",
     "@types/fs-extra": "^11.0.4",
     "@types/lodash-es": "^4.17.12",
-    "@types/node": "^22.13.14",
+    "@types/node": "^22.13.17",
     "@types/qs": "^6.9.18",
     "@unocss/eslint-plugin": "^66.0.0",
     "@vitejs/plugin-vue": "^5.2.3",
