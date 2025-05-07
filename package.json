@@ -44,7 +44,7 @@
     "eslint": "^9.25.1",
     "eslint-plugin-oxlint": "^0.16.9",
     "fs-extra": "^11.3.0",
-    "lint-staged": "^15.5.1",
+    "lint-staged": "^15.5.2",
     "oxlint": "^0.16.9",
     "picocolors": "^1.1.1",
     "sass": "^1.87.0",
