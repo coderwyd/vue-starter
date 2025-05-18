@@ -49,7 +49,7 @@
     "picocolors": "^1.1.1",
     "sass": "^1.88.0",
     "simple-git-hooks": "^2.13.0",
-    "terser": "^5.39.0",
+    "terser": "^5.39.2",
     "typescript": "^5.8.3",
     "unocss": "^66.0.0",
     "unplugin-auto-import": "^19.2.0",
