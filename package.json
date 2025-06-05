@@ -42,7 +42,7 @@
     "cross-env": "^7.0.3",
     "dotenv": "^16.5.0",
     "eslint": "^9.28.0",
-    "eslint-plugin-oxlint": "^0.16.12",
+    "eslint-plugin-oxlint": "^0.17.0",
     "fs-extra": "^11.3.0",
     "lint-staged": "^15.5.2",
     "oxlint": "^0.16.12",
