@@ -71,8 +71,8 @@ importers:
         specifier: ^9.29.0
         version: 9.29.0(jiti@2.4.2)
       eslint-plugin-oxlint:
-        specifier: ^0.18.1
-        version: 0.18.1
+        specifier: ^1.4.0
+        version: 1.4.0
       fs-extra:
         specifier: ^11.3.0
         version: 11.3.0
@@ -2007,8 +2007,8 @@ packages:
     resolution: {integrity: sha512-brcKcxGnISN2CcVhXJ/kEQlNa0MEfGRtwKtWA16SkqXHKitaKIMrfemJKLKX1YqDU5C/5JY3PvZXd5jEW04e0Q==}
     engines: {node: '>=5.0.0'}
 
-  eslint-plugin-oxlint@0.18.1:
-    resolution: {integrity: sha512-QmwUWiihxS4MimFTzJQqrC5H8os8s1ZIiWj290dvAkIlhCP/CIBJdauYZRE7kNAPeLGJoR7DZGRX1Bcn2JHYbQ==}
+  eslint-plugin-oxlint@1.4.0:
+    resolution: {integrity: sha512-bbfRo9WXlzaWCiM/tBAXIhnx6d7x/uKJJxvhvDNwMGupnJ/EHrIqKUjloRjFDLq0e2TcZInxC9VqrWy47VEElw==}
 
   eslint-plugin-perfectionist@4.10.1:
     resolution: {integrity: sha512-GXwFfL47RfBLZRGQdrvGZw9Ali2T2GPW8p4Gyj2fyWQ9396R/HgJMf0m9kn7D6WXRwrINfTDGLS+QYIeok9qEg==}
@@ -5275,7 +5275,7 @@ snapshots:
 
   eslint-plugin-no-only-tests@3.3.0: {}
 
-  eslint-plugin-oxlint@0.18.1:
+  eslint-plugin-oxlint@1.4.0:
     dependencies:
       jsonc-parser: 3.3.1
 
