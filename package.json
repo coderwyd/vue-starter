@@ -38,7 +38,7 @@
     "@types/qs": "^6.14.0",
     "@unocss/eslint-plugin": "^66.3.3",
     "@vitejs/plugin-vue": "^5.2.4",
-    "@vitejs/plugin-vue-jsx": "^4.2.0",
+    "@vitejs/plugin-vue-jsx": "^5.0.1",
     "cross-env": "^7.0.3",
     "dotenv": "^16.6.1",
     "eslint": "^9.31.0",
