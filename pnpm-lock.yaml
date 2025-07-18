@@ -59,7 +59,7 @@ importers:
         specifier: ^9.31.0
         version: 9.31.0(jiti@2.4.2)
       eslint-plugin-oxlint:
-        specifier: ^1.6.0
+        specifier: ^1.7.0
         version: 1.7.0
       lint-staged:
         specifier: ^16.1.2
