@@ -1,12 +1,12 @@
-import { isNil } from 'lodash-es'
+import { isNullish } from "radashi";
 
 export interface CreateStorageParams {
-  prefixKey: string
-  storage: Storage
-  timeout?: Nullable<number>
+  prefixKey: string;
+  storage: Storage;
+  timeout?: Nullable<number>;
 }
 export function createStorage({
-  prefixKey = '',
+  prefixKey = "",
   storage = sessionStorage,
   timeout = null,
 }: Partial<CreateStorageParams> = {}) {
@@ -17,16 +17,16 @@ export function createStorage({
    * @example
    */
   const WebStorage = class WebStorage {
-    private storage: Storage
-    private prefixKey?: string
+    private storage: Storage;
+    private prefixKey?: string;
 
     constructor() {
-      this.storage = storage
-      this.prefixKey = prefixKey
+      this.storage = storage;
+      this.prefixKey = prefixKey;
     }
 
     private getKey(key: string) {
-      return `${this.prefixKey}${key}`.toUpperCase()
+      return `${this.prefixKey}${key}`.toUpperCase();
     }
 
     /**
@@ -40,9 +40,9 @@ export function createStorage({
       const stringData = JSON.stringify({
         value,
         time: Date.now(),
-        expire: !isNil(expire) ? Date.now() + expire * 1000 : null,
-      })
-      this.storage.setItem(this.getKey(key), stringData)
+        expire: !isNullish(expire) ? Date.now() + expire * 1000 : null,
+      });
+      this.storage.setItem(this.getKey(key), stringData);
     }
 
     /**
@@ -52,17 +52,17 @@ export function createStorage({
      * @memberof Cache
      */
     get(key: string, def: any = null): any {
-      const val = this.storage.getItem(this.getKey(key))
-      if (!val) return def
+      const val = this.storage.getItem(this.getKey(key));
+      if (!val) return def;
 
       try {
-        const data = JSON.parse(val)
-        const { value, expire } = data
-        if (isNil(expire) || expire >= Date.now()) return value
+        const data = JSON.parse(val);
+        const { value, expire } = data;
+        if (isNullish(expire) || expire >= Date.now()) return value;
 
-        this.remove(key)
+        this.remove(key);
       } catch {
-        return def
+        return def;
       }
     }
 
@@ -72,15 +72,15 @@ export function createStorage({
      * @memberof Cache
      */
     remove(key: string) {
-      this.storage.removeItem(this.getKey(key))
+      this.storage.removeItem(this.getKey(key));
     }
 
     /**
      * Delete all caches of this instance
      */
     clear(): void {
-      this.storage.clear()
+      this.storage.clear();
     }
-  }
-  return new WebStorage()
+  };
+  return new WebStorage();
 }

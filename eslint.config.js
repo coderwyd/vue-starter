@@ -4,6 +4,7 @@ import oxlint from 'eslint-plugin-oxlint'
 export default defineConfig(
   {
     unocss: true,
+    isInEditor: false,
   },
   {
     rules: {

@@ -1,18 +1,22 @@
-import { defineConfig, loadEnv } from 'vite'
+import { fileURLToPath } from 'node:url'
+import vue from '@vitejs/plugin-vue'
+import vueJsx from '@vitejs/plugin-vue-jsx'
+import unocss from 'unocss/vite'
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import { defineConfig } from 'vite'
+import { createHtmlPlugin } from 'vite-plugin-html'
+import vueDevTools from 'vite-plugin-vue-devtools'
 import type { ConfigEnv, UserConfig } from 'vite'
-import { createVitePlugins, getRootPath, getSrcPath } from './build'
 
-export default defineConfig(({ command, mode }: ConfigEnv): UserConfig => {
-  const root = getRootPath()
-  const srcPath = getSrcPath()
-  const { VITE_ENABLE_ANALYZE, VITE_BUILD_COMPRESS } = loadEnv(mode, root)
+export default defineConfig(({ command }: ConfigEnv): UserConfig => {
   const isBuild = command === 'build'
   return {
     resolve: {
       alias: {
-        '~': root,
-        '@': srcPath,
-        '#': getSrcPath('types'),
+        '~': fileURLToPath(new URL('./', import.meta.url)),
+        '@': fileURLToPath(new URL('./src', import.meta.url)),
+        '#': fileURLToPath(new URL('./types', import.meta.url)),
       },
     },
     server: {
@@ -36,11 +40,24 @@ export default defineConfig(({ command, mode }: ConfigEnv): UserConfig => {
         },
       },
     },
-    plugins: createVitePlugins({
-      isBuild,
-      enableAnalyze: VITE_ENABLE_ANALYZE === 'true',
-      compress: VITE_BUILD_COMPRESS,
-    }),
+    plugins: [
+      vue(),
+      vueJsx(),
+      vueDevTools(),
+      unocss(),
+      AutoImport({
+        imports: ['vue', 'vue-router', '@vueuse/core', 'pinia'],
+        dts: 'types/auto-imports.d.ts',
+        vueTemplate: true,
+        dirs: ['src/store/modules', 'src/composables', 'src/hooks'],
+      }),
+      Components({
+        dts: 'types/components.d.ts',
+      }),
+      createHtmlPlugin({
+        minify: isBuild,
+      }),
+    ],
     css: {
       devSourcemap: true,
     },

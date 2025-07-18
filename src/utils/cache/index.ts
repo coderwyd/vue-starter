@@ -1,5 +1,4 @@
-import { DEFAULT_CACHE_TIME } from '@/settings/encryptionSetting'
-import { getStorageShortName } from '@/utils/env'
+import { name, version } from '~/package.json'
 import { createStorage as create } from './storage-cache'
 import type { CreateStorageParams } from './storage-cache'
 
@@ -8,7 +7,7 @@ export type Options = Partial<CreateStorageParams>
 function createOptions(storage: Storage, options: Options = {}): Options {
   return {
     storage,
-    prefixKey: getStorageShortName(),
+    prefixKey: `${name}__${version}__`.toUpperCase(),
     ...options,
   }
 }
@@ -25,14 +24,14 @@ export function createStorage(
 export function createSessionStorage(options: Options = {}) {
   return createStorage(sessionStorage, {
     ...options,
-    timeout: DEFAULT_CACHE_TIME,
+    timeout: 7 * 24 * 60 * 60,
   })
 }
 
 export function createLocalStorage(options: Options = {}) {
   return createStorage(localStorage, {
     ...options,
-    timeout: DEFAULT_CACHE_TIME,
+    timeout: 7 * 24 * 60 * 60,
   })
 }
 

@@ -1,21 +1,15 @@
-import type { UserInfo } from '#/store'
-import {
-  ACCESS_TOKEN_KEY,
-  CacheTypeEnum,
-  REFRESH_TOKEN_KEY,
-} from '@/enums/cacheEnum'
-import type { USER_INFO_KEY, USER_UUID_KEY } from '@/enums/cacheEnum'
-import projectSetting from '@/settings/projectSetting'
+import { ACCESS_TOKEN_KEY, REFRESH_TOKEN_KEY } from '@/enums/cacheEnum'
 import { ls, ss } from '@/utils/cache'
+import type { GetUserInfoResult } from '@/api/user/types'
+import type { USER_INFO_KEY, USER_UUID_KEY } from '@/enums/cacheEnum'
 
-const { permissionCacheType } = projectSetting
-const isLocal = permissionCacheType === CacheTypeEnum.LOCAL
+const isLocal = true
 
 interface BasicStore {
   [ACCESS_TOKEN_KEY]: string | number | null | undefined
   [REFRESH_TOKEN_KEY]: string | number | null | undefined
   [USER_UUID_KEY]: string | number | null | undefined
-  [USER_INFO_KEY]: UserInfo
+  [USER_INFO_KEY]: GetUserInfoResult | null | undefined
 }
 
 export type BasicKeys = keyof BasicStore

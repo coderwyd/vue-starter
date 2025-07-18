@@ -16,7 +16,6 @@
   //   "@/": "${workspaceRoot}/",
   //   "#/": "${workspaceRoot}/"
   // },
-  "files.eol": "\n",
   "files.associations": {
     "*.env.*": "dotenv"
   },

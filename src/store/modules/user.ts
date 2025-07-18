@@ -5,19 +5,17 @@ import {
   loginAccountApi,
   logoutApi,
 } from '@/api/user'
-import type { GetUserInfoResult, LoginAccountParams } from '@/api/user/types'
 import {
   ACCESS_TOKEN_KEY,
   REFRESH_TOKEN_KEY,
   USER_INFO_KEY,
   USER_UUID_KEY,
 } from '@/enums/cacheEnum'
-import { ResultEnum } from '@/enums/httpEnum'
-import { PageEnum } from '@/enums/pageEnum'
 import { router } from '@/router'
 import { store } from '@/store'
-import { getAuthCache, setAuthCache } from '@/utils/auth'
+import { setAuthCache } from '@/utils/auth'
 import { ss } from '@/utils/cache'
+import type { GetUserInfoResult, LoginAccountParams } from '@/api/user/types'
 
 interface UserState {
   userInfo: Nullable<GetUserInfoResult>
@@ -27,7 +25,7 @@ interface UserState {
   lastUpdateTime: number
 }
 
-export const useUserStore = defineStore('app-user',{
+export const useUserStore = defineStore('app-user', {
   state: (): UserState => ({
     userInfo: null,
     accessToken: undefined,
@@ -35,25 +33,6 @@ export const useUserStore = defineStore('app-user',{
     userUuid: undefined,
     lastUpdateTime: 0,
   }),
-  getters: {
-    getUserInfo(state): GetUserInfoResult {
-      return (
-        state.userInfo || getAuthCache<GetUserInfoResult>(USER_INFO_KEY) || {}
-      )
-    },
-    getAccessToken(state) {
-      return state.accessToken || getAuthCache<string>(ACCESS_TOKEN_KEY)
-    },
-    getRefreshToken(state) {
-      return state.refreshToken || getAuthCache<string>(REFRESH_TOKEN_KEY)
-    },
-    getUserUuid(state) {
-      return state.userUuid || getAuthCache<string>(USER_UUID_KEY)
-    },
-    getLastUpdateTime(state) {
-      return state.lastUpdateTime
-    },
-  },
   actions: {
     setAccessToken(info: string | undefined) {
       this.accessToken = info || ''
@@ -87,42 +66,40 @@ export const useUserStore = defineStore('app-user',{
       },
     ): Promise<Nullable<GetUserInfoResult>> {
       const { goHome = true, ...loginParams } = params
-      const { resultCode, message, data } = await loginAccountApi(loginParams)
-      if (resultCode === ResultEnum.SUCCESS) {
-        const { oauthTokenVo, userUuid } = data
-        this.setAccessToken(oauthTokenVo.value)
-        this.setRefreshToken(oauthTokenVo.refreshToken.value)
-        this.setUserUuid(userUuid)
-        return this.afterLoginAction(goHome)
-      }
+      const { oauthTokenVo, userUuid } = await loginAccountApi(loginParams)
+      // if (resultCode === ResultEnum.SUCCESS) {
+      this.setAccessToken(oauthTokenVo.value)
+      this.setRefreshToken(oauthTokenVo.refreshToken.value)
+      this.setUserUuid(userUuid)
+      return this.afterLoginAction(goHome)
+      // }
 
-      return Promise.reject({
-        resultCode,
-        message,
-      })
+      // return Promise.reject({
+      //   resultCode,
+      //   message,
+      // })
     },
     async afterLoginAction(
       goHome?: boolean,
     ): Promise<Nullable<GetUserInfoResult>> {
-      if (!this.getAccessToken) return null
+      if (!this.accessToken) return null
       const userInfo = await this.getUserInfoAction()
       if (goHome) {
-        await router.replace(PageEnum.BASE_HOME)
+        await router.replace('/home')
       }
       return userInfo
     },
     async getUserInfoAction(): Promise<Nullable<GetUserInfoResult>> {
       const userInfo = await getUserInfoApi({
-        userUuid: this.getUserUuid,
+        userUuid: this.userUuid,
       })
 
-      userInfo.realName = `${userInfo.firstName} ${userInfo.lastName}`
       this.setUserInfo(userInfo)
       return userInfo
     },
     async doRefreshToken() {
       const data = await getNewTokenByRefreshTokenApi({
-        refreshToken: this.getRefreshToken,
+        refreshToken: this.refreshToken!,
       })
       const { token, refreshToken } = data
       this.setAccessToken(token)
@@ -133,10 +110,10 @@ export const useUserStore = defineStore('app-user',{
      * @description: logout
      */
     async logout(goLogin = false) {
-      if (this.getAccessToken) {
+      if (this.accessToken) {
         try {
           await logoutApi({
-            token: this.getAccessToken,
+            token: this.accessToken,
           })
         } catch {
           console.log('logout error')
@@ -147,7 +124,7 @@ export const useUserStore = defineStore('app-user',{
       this.setUserInfo(null)
       ss.set('operationType', 'signIn')
       if (goLogin) {
-        router.push(PageEnum.BASE_HOME)
+        router.push('/home')
       }
     },
   },
