@@ -23,7 +23,7 @@
   "dependencies": {
     "@vueuse/core": "^13.7.0",
     "axios": "^1.11.0",
-    "dayjs": "^1.11.13",
+    "dayjs": "^1.11.18",
     "pinia": "^3.0.3",
     "radashi": "^12.6.2",
     "vue": "^3.5.20",
