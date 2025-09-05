@@ -30,7 +30,7 @@
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
-    "@coderwyd/eslint-config": "^4.4.1",
+    "@coderwyd/eslint-config": "^4.6.3",
     "@sxzz/prettier-config": "^2.2.4",
     "@types/node": "^22.18.0",
     "@unocss/eslint-plugin": "^66.4.2",
