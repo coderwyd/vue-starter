@@ -44,7 +44,7 @@
     "prettier": "^3.6.2",
     "sass": "^1.92.1",
     "simple-git-hooks": "^2.13.1",
-    "terser": "^5.43.1",
+    "terser": "^5.44.0",
     "typescript": "^5.9.2",
     "unocss": "^66.4.2",
     "unplugin-auto-import": "^19.3.0",
