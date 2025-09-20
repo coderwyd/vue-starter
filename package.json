@@ -42,7 +42,7 @@
     "lint-staged": "^16.1.6",
     "oxlint": "^1.16.0",
     "prettier": "^3.6.2",
-    "sass": "^1.92.1",
+    "sass": "^1.93.0",
     "simple-git-hooks": "^2.13.1",
     "terser": "^5.44.0",
     "typescript": "^5.9.2",
