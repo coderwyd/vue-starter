@@ -36,7 +36,7 @@
     "@unocss/eslint-plugin": "^66.5.2",
     "@vitejs/plugin-vue": "^6.0.1",
     "@vitejs/plugin-vue-jsx": "^5.1.1",
-    "dotenv": "^17.2.2",
+    "dotenv": "^17.2.3",
     "eslint": "^9.36.0",
     "eslint-plugin-oxlint": "^1.16.0",
     "lint-staged": "^16.2.3",
