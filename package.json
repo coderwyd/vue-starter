@@ -32,7 +32,7 @@
   "devDependencies": {
     "@coderwyd/eslint-config": "^4.4.1",
     "@sxzz/prettier-config": "^2.2.4",
-    "@types/node": "^22.18.12",
+    "@types/node": "^22.18.13",
     "@unocss/eslint-plugin": "^66.5.4",
     "@vitejs/plugin-vue": "^6.0.1",
     "@vitejs/plugin-vue-jsx": "^5.1.1",
