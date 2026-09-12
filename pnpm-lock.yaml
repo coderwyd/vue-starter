@@ -92,7 +92,7 @@ importers:
         specifier: ^28.8.0
         version: 28.8.0(@babel/parser@7.28.5)(vue@3.5.25(typescript@5.9.3))
       vite:
-        specifier: ^7.2.7
+        specifier: ^7.3.6
         version: 7.3.6(@types/node@22.20.1)(jiti@2.6.1)(sass@1.102.0)(terser@5.44.1)(yaml@2.8.2)
       vite-plugin-html:
         specifier: ^3.2.2
@@ -6549,11 +6549,11 @@ snapshots:
   vite@7.3.6(@types/node@22.20.1)(jiti@2.6.1)(sass@1.102.0)(terser@5.44.1)(yaml@2.8.2):
     dependencies:
       esbuild: 0.28.1
-      fdir: 6.5.0(picomatch@4.0.3)
-      picomatch: 4.0.3
+      fdir: 6.5.0(picomatch@4.0.5)
+      picomatch: 4.0.5
       postcss: 8.5.6
       rollup: 4.45.1
-      tinyglobby: 0.2.15
+      tinyglobby: 0.2.17
     optionalDependencies:
       '@types/node': 22.20.1
       fsevents: 2.3.3
