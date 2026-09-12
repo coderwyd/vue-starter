@@ -41,7 +41,7 @@ importers:
         specifier: ^2.2.7
         version: 2.3.2(prettier@3.9.6)
       '@types/node':
-        specifier: ^22.19.21
+        specifier: ^22.20.1
         version: 22.20.1
       '@unocss/eslint-plugin':
         specifier: ^66.5.12
