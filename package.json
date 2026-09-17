@@ -21,7 +21,7 @@
     "postinstall": "simple-git-hooks"
   },
   "dependencies": {
-    "@vueuse/core": "^14.2.1",
+    "@vueuse/core": "^14.4.0",
     "axios": "^1.13.6",
     "dayjs": "^1.11.23",
     "pinia": "^3.0.4",
