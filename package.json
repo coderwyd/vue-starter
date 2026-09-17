@@ -43,7 +43,7 @@
     "oxlint": "^1.77.0",
     "prettier": "^3.9.6",
     "sass": "^1.94.3",
-    "simple-git-hooks": "^2.13.1",
+    "simple-git-hooks": "^2.14.0",
     "terser": "^5.44.1",
     "typescript": "^5.9.3",
     "unocss": "^66.5.12",
