@@ -25,7 +25,7 @@ importers:
         specifier: ^3.0.4
         version: 3.0.4(typescript@5.9.3)(vue@3.5.25(typescript@5.9.3))
       radashi:
-        specifier: ^12.7.2
+        specifier: ^12.9.6
         version: 12.9.6
       vue:
         specifier: ^3.5.25
