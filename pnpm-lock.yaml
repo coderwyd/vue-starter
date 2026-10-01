@@ -92,7 +92,7 @@ importers:
         specifier: ^28.8.0
         version: 28.8.0(@babel/parser@7.29.8)(vue@3.5.25(typescript@5.9.3))
       vite:
-        specifier: ^7.2.7
+        specifier: ^7.3.6
         version: 7.3.6(@types/node@22.20.4)(jiti@2.6.1)(sass@1.102.0)(terser@5.44.1)(yaml@2.8.2)
       vite-plugin-html:
         specifier: ^3.2.2
@@ -4582,7 +4582,7 @@ snapshots:
       debug: 4.4.3
       minimatch: 10.2.4
       semver: 7.7.4
-      tinyglobby: 0.2.15
+      tinyglobby: 0.2.17
       ts-api-utils: 2.4.0(typescript@5.9.3)
       typescript: 5.9.3
     transitivePeerDependencies:
@@ -4597,7 +4597,7 @@ snapshots:
       debug: 4.4.3
       minimatch: 10.2.4
       semver: 7.7.4
-      tinyglobby: 0.2.15
+      tinyglobby: 0.2.17
       ts-api-utils: 2.5.0(typescript@5.9.3)
       typescript: 5.9.3
     transitivePeerDependencies:
@@ -4972,7 +4972,7 @@ snapshots:
       alien-signals: 3.0.0
       muggle-string: 0.4.1
       path-browserify: 1.0.1
-      picomatch: 4.0.3
+      picomatch: 4.0.5
     optionalDependencies:
       typescript: 5.9.3
 
@@ -5682,10 +5682,6 @@ snapshots:
       reusify: 1.1.0
 
   fdir@6.4.6(picomatch@4.0.3):
-    optionalDependencies:
-      picomatch: 4.0.3
-
-  fdir@6.5.0(picomatch@4.0.3):
     optionalDependencies:
       picomatch: 4.0.3
 
@@ -6521,8 +6517,8 @@ snapshots:
 
   tinyglobby@0.2.15:
     dependencies:
-      fdir: 6.5.0(picomatch@4.0.3)
-      picomatch: 4.0.3
+      fdir: 6.5.0(picomatch@4.0.5)
+      picomatch: 4.0.5
 
   tinyglobby@0.2.17:
     dependencies:
@@ -6550,7 +6546,7 @@ snapshots:
 
   ts-declaration-location@1.0.7(typescript@5.9.3):
     dependencies:
-      picomatch: 4.0.3
+      picomatch: 4.0.5
       typescript: 5.9.3
 
   tslib@2.8.1: {}
@@ -6756,11 +6752,11 @@ snapshots:
   vite@7.3.6(@types/node@22.20.4)(jiti@2.6.1)(sass@1.102.0)(terser@5.44.1)(yaml@2.8.2):
     dependencies:
       esbuild: 0.28.1
-      fdir: 6.5.0(picomatch@4.0.3)
-      picomatch: 4.0.3
+      fdir: 6.5.0(picomatch@4.0.5)
+      picomatch: 4.0.5
       postcss: 8.5.6
       rollup: 4.45.1
-      tinyglobby: 0.2.15
+      tinyglobby: 0.2.17
     optionalDependencies:
       '@types/node': 22.20.4
       fsevents: 2.3.3
