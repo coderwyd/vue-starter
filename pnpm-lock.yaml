@@ -98,7 +98,7 @@ importers:
         specifier: ^3.2.2
         version: 3.2.2(vite@7.3.6(@types/node@22.20.4)(jiti@2.6.1)(sass@1.102.0)(terser@5.44.1)(yaml@2.8.2))
       vite-plugin-vue-devtools:
-        specifier: ^8.0.7
+        specifier: ^8.2.1
         version: 8.2.1(vite@7.3.6(@types/node@22.20.4)(jiti@2.6.1)(sass@1.102.0)(terser@5.44.1)(yaml@2.8.2))(vue@3.5.25(typescript@5.9.3))
       vue-tsc:
         specifier: ^3.1.5
