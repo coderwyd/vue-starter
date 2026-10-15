@@ -34,7 +34,7 @@
     "@sxzz/prettier-config": "^2.3.2",
     "@types/node": "^22.20.5",
     "@unocss/eslint-plugin": "^66.5.12",
-    "@vitejs/plugin-vue": "^6.0.9",
+    "@vitejs/plugin-vue": "^6.0.10",
     "@vitejs/plugin-vue-jsx": "^5.1.6",
     "dotenv": "^17.4.2",
     "eslint": "^9.39.5",
