@@ -38,8 +38,8 @@ importers:
         specifier: ^4.11.1
         version: 4.11.1(@typescript-eslint/rule-tester@8.57.0(eslint@9.39.5(jiti@2.6.1))(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.66.0(typescript@5.9.3))(@typescript-eslint/utils@8.66.0(eslint@9.39.5(jiti@2.6.1))(typescript@5.9.3))(@unocss/eslint-plugin@66.7.5(eslint@9.39.5(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.5(jiti@2.6.1))(typescript@5.9.3)
       '@sxzz/prettier-config':
-        specifier: ^2.3.2
-        version: 2.3.2(prettier@3.9.10)
+        specifier: ^2.3.3
+        version: 2.3.3(prettier@3.9.10)
       '@types/node':
         specifier: ^22.20.5
         version: 22.20.5
@@ -1140,8 +1140,8 @@ packages:
   '@polka/url@1.0.0-next.29':
     resolution: {integrity: sha512-wwQAWhWSuHaag8c4q/KN/vCoeOJYshAIvMQwD4GpSb3OiZklFfvAgmj0VCBBImRpuF/aFgIRzllXlVX93Jevww==}
 
-  '@prettier/plugin-oxc@0.2.2':
-    resolution: {integrity: sha512-yscDcAuDtvOfE0c8i8UVP+hjK43VIPpwfMv+73mdkpy12rZWnk5Kl6N6pUneQmaZ3PKTg611zemBHFpMjp9ZnQ==}
+  '@prettier/plugin-oxc@0.2.3':
+    resolution: {integrity: sha512-6TYRFBxthmW0IULsZjik2Gu62jc17xPILlcSIXTXfrhDH4etIcissalZ+RO5oweMWidM3jJ38QJbkD2C6J0/LA==}
     engines: {node: '>=14'}
 
   '@quansync/fs@1.0.0':
@@ -1269,8 +1269,8 @@ packages:
     resolution: {integrity: sha512-TeheYy0ILzBEI/CO55CP6zJCSdSWeRtGnHy8U8dWSUH4I68iqTsy7HkMktR4xakThc9jotkPQUXT4ITdbV7cHA==}
     engines: {node: '>=18'}
 
-  '@sxzz/prettier-config@2.3.2':
-    resolution: {integrity: sha512-OqVsdrjsVcxsC/RDC9JsxJHMjYBkm0Haxki4crBxrI4SQyl3ZQSm+6H4omhKDVI4uEgTnd1s+lmJojqtiDt9Mg==}
+  '@sxzz/prettier-config@2.3.3':
+    resolution: {integrity: sha512-MFy6ysBnGzOZRcLffCyab6ZCh8WQi5WslCf5V9s0sWtahW5lSMASrIY2Hm5gmUhAgjRnILAUxRzAZo0Cm1Y3gw==}
     peerDependencies:
       prettier: ^3.8.0
       prettier-plugin-astro: ^0.14.1
@@ -4224,7 +4224,7 @@ snapshots:
 
   '@polka/url@1.0.0-next.29': {}
 
-  '@prettier/plugin-oxc@0.2.2':
+  '@prettier/plugin-oxc@0.2.3':
     dependencies:
       oxc-parser: 0.139.0
 
@@ -4301,9 +4301,9 @@ snapshots:
 
   '@sindresorhus/base62@1.0.0': {}
 
-  '@sxzz/prettier-config@2.3.2(prettier@3.9.10)':
+  '@sxzz/prettier-config@2.3.3(prettier@3.9.10)':
     dependencies:
-      '@prettier/plugin-oxc': 0.2.2
+      '@prettier/plugin-oxc': 0.2.3
       prettier: 3.9.10
 
   '@tybys/wasm-util@0.10.3':
