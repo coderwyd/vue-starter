@@ -37,7 +37,7 @@
     "@vitejs/plugin-vue": "^6.0.10",
     "@vitejs/plugin-vue-jsx": "^5.1.6",
     "dotenv": "^17.4.2",
-    "eslint": "^9.39.5",
+    "eslint": "^10.13.0",
     "eslint-plugin-oxlint": "^1.77.0",
     "lint-staged": "^16.4.0",
     "oxlint": "^1.77.0",
