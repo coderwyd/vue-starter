@@ -25,8 +25,8 @@ importers:
         specifier: ^3.0.4
         version: 3.0.4(typescript@5.9.3)(vue@3.5.44(typescript@5.9.3))
       radashi:
-        specifier: ^12.9.6
-        version: 12.9.6
+        specifier: ^13.0.1
+        version: 13.0.1
       vue:
         specifier: ^3.5.44
         version: 3.5.44(typescript@5.9.3)
@@ -2957,9 +2957,9 @@ packages:
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
-  radashi@12.9.6:
-    resolution: {integrity: sha512-0xf53IXAtaJEQ9VSy7npEDIRZKyKBNtNFRYycdtejzHXb0/pbKXj/nFVeJbv1Sbzzzj7aaR+Ttu9c5KTrSmGzw==}
-    engines: {node: '>=16.0.0'}
+  radashi@13.0.1:
+    resolution: {integrity: sha512-rn7Rg2qfyRl64XMraDtAQenu5UdTAayne8QKe4pmTAKMgkD5C6crAol00ho3THqwgYCm8xgWdmYND1WYP9VrfA==}
+    engines: {node: '>=18.0.0'}
 
   readdirp@3.6.0:
     resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==}
@@ -6290,7 +6290,7 @@ snapshots:
 
   queue-microtask@1.2.3: {}
 
-  radashi@12.9.6: {}
+  radashi@13.0.1: {}
 
   readdirp@3.6.0:
     dependencies:
