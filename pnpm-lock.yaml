@@ -65,7 +65,7 @@ importers:
         specifier: ^16.4.0
         version: 16.4.0
       oxlint:
-        specifier: ^1.90.0
+        specifier: ^1.91.0
         version: 1.91.0
       prettier:
         specifier: ^3.9.10
