@@ -71,7 +71,7 @@ importers:
         specifier: ^3.9.10
         version: 3.9.10
       sass:
-        specifier: ^1.108.1
+        specifier: ^1.108.2
         version: 1.108.2
       simple-git-hooks:
         specifier: ^2.14.0
