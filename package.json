@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@coderwyd/eslint-config": "^5.2.0",
-    "@sxzz/prettier-config": "^2.3.3",
+    "@sxzz/prettier-config": "^2.4.0",
     "@types/node": "^22.20.5",
     "@unocss/eslint-plugin": "^66.12.0",
     "@vitejs/plugin-vue": "^6.0.10",
